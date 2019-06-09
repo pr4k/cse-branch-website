@@ -54,7 +54,7 @@ btn {
 div#form {
 	color: #fff;
 	background-attachment: scroll;
-	background: #1c1e21 url(https://static.pexels.com/photos/8819/warsaw.jpg);
+	background: linear-gradient(#000066,#993300) ;
 	background-position: center center;
 	background-repeat: none;
 	-webkit-background-size: cover;
