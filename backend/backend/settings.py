@@ -54,7 +54,11 @@ ROOT_URLCONF = 'backend.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, "home/templates"),
+                os.path.join(BASE_DIR, "events/templates"),
+                os.path.join(BASE_DIR, "student_profile/templates"),
+                os.path.join(BASE_DIR, "application/templates")
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -79,6 +83,11 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+    '/static/',
+]
+print(STATICFILES_DIRS)
 
 
 # Password validation

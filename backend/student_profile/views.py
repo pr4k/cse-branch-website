@@ -1,3 +1,6 @@
 from django.shortcuts import render
+from django.views.generic import TemplateView
 
-# Create your views here.
+class allStudents(TemplateView):
+    def get(self, request, **kwargs):
+        return render(request, 'students_profile.html', context=None)
