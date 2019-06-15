@@ -1,0 +1,120 @@
+
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Title here</title>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+
+    <!--headerIncludes-->
+{% load static %}
+	<!-- css files -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="{% static '/css/homepage/style.css' %}" type="text/css" media="all"> <!-- Style-CSS --> 
+	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}"> <!-- Font-Awesome-Icons-CSS -->
+	<!-- //css files -->
+	
+	<!-- google fonts -->
+	<link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet">
+	<!-- //google fonts -->
+
+<style>
+#home{
+	background-image: url( "{% static 'img/homepage/front.jpg' %}");
+}
+
+</style>	
+</head>
+
+	
+<body>
+
+    <div id="page" class="page"><!-- //header -->
+<header>	
+	<div class="container">
+		<!-- nav -->
+		<nav class="py-md-4">
+        <div id="logo">
+			<h1> <a href="" class="editContent" style="color: rgb(255, 255, 255); font-size: 25px; background-color: rgba(0, 0, 0, 0); font-family: &quot;Lato&quot;, sans-serif; outline: 2px solid rgba(233, 94, 94, 0.5); outline-offset: -2px; cursor: pointer;"><span class="fa fa-glass" aria-hidden="true" style="outline: medium none currentcolor; cursor: inherit;"></span><u> Par<i>ty Time</i></u><span class="block editContent" style="outline: medium none currentcolor; cursor: inherit;"></span></a></h1>
+		</div>
+
+        <label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
+        <input id="drop" type="checkbox">
+            <ul class="menu mt-md-3">
+                <li class="mr-lg-4 mr-3 active"><a href="" style="color: rgb(255, 255, 255); font-weight: 700; text-transform: uppercase;">HOME</a></li>
+                <li class="mr-lg-4 mr-3">
+                <!-- First Tier Drop Down -->
+                <label for="drop-2" class="toggle">Dropdown <span class="fa fa-angle-down" aria-hidden="true" style="outline: none; cursor: inherit;"></span> </label>
+                <a href="#" style="color: rgb(255, 255, 255); font-weight: 700; text-transform: uppercase;">Dropdown <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                <input id="drop-2" type="checkbox">
+                <ul class="drop-down">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="/events" style="outline: medium none currentcolor; cursor: inherit;">Events</a></li>
+                    <li><a href="forms/cr_elections" style="color: rgb(51, 51, 51); font-weight: 700; text-transform: uppercase; outline: medium none currentcolor; cursor: inherit;">FORMS</a></li>
+                    <li><a href="/students" style="color: rgb(51, 51, 51); font-weight: 700; text-transform: uppercase;">STUDENT PROFILES</a></li>
+                    
+                </ul>
+                </li>
+                <li class="mr-lg-4 mr-3"><a href="#contact" style="color: rgb(255, 255, 255); font-weight: 700; text-transform: uppercase;">CONTACT</a></li>
+                <li class="mr-3 icons"><a href="#" style="outline: medium none currentcolor; cursor: inherit;"></a></li>
+                <li class="mr-3 icons"><a href="#" style="outline: medium none currentcolor; cursor: inherit;"></a></li>
+                
+                <li class=" icons"><a href="#" style="outline: medium none currentcolor; cursor: inherit;"></a></li>
+            </ul>
+        </nav>
+		<!-- //nav -->
+	</div>
+</header>
+<!-- //header -->
+		
+<!-- banner -->
+<section class="banner bg bg1" id="home" style=" background-color: rgba(0, 0, 0, 0); margin-top: 0px;  ">
+	<div class="banner-layer">
+		<div class="container">
+			<div class="w3pvt_banner_info text-center">
+				<div class="w3layouts_banner_margin">
+					<h3 class="editContent" style="color: rgb(255, 153, 0); font-size: 80px; font-family: &quot;lato&quot;, sans-serif; background-color: rgba(0, 0, 0, 0);"><b>2019 </b></h3>
+					<h2 class="editContent" style="color: rgb(255, 253, 0); font-size: 90px; background-color: rgba(0, 0, 0, 0); font-family: serif;">WELCOME!!<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FRESHERS<br></h2>
+					<h4 class="editContent" style="color: rgb(255, 255, 255); font-size: 30px; background-color: rgba(0, 0, 0, 0); font-family: &quot;Lato&quot;, sans-serif;"><b>Are you All ready to Experience this day!!</b><br></h4>
+					<a href="#events" class="btn" style="border-radius: 0px; font-size: 20px; background-color: rgb(255, 0, 0);">EXPLORE NOW!!</a>
+				</div>
+			</div>
+			<!-- To bottom button-->
+			<div class="thim-click-to-bottom mt-5 pt-md-5">
+				<div class="rotate">
+					<a href="#about" class="scroll">
+						<span class="fa fa-arrow-circle-down" style="color: rgb(255, 255, 255); font-size: 40px;" id="ui-id-2"></span>
+					</a>
+				</div>
+			</div>
+			<!-- //To bottom button-->
+		</div>
+	</div>
+</section>
+<!-- //banner -->	
+
+<!-- about -->
+
+<!-- about -->
+
+
+ 
+<!-- events -->
+
+<!-- //events -->
+
+
+
+ <!-- contact -->
+    
+    <!-- //contact -->
+</div>
+	
+
+
+</body></html>
