@@ -117,9 +117,10 @@
                     </div>
                 </div>
             </div>
-            {% for user in data %}
-            <h1>{{user.insta_handle}}</h1>
-             {% endfor %}
+            {% for i in data|length|get_range %}
+            <h1>{{ data|length }}</h1>
+            {% endfor %}
+            
         </div>
         
 
