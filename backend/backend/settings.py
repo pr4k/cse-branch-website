@@ -25,7 +25,9 @@ SECRET_KEY = '9eu_!@csk#f6%-^b6zi_1wfu@a%2uob%i-qgjek(y-ipi$y2=$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [u'http://pr4k.pythonanywhere.com/',
+                u'127.0.0.1'
+]
 
 
 # Application definition
@@ -37,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'student_profile'
 ]
 
 MIDDLEWARE = [
