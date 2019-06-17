@@ -1,0 +1,64 @@
+
+body
+{
+    background: linear-gradient(#000066,#993300);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#submit
+{
+    display: block; 
+    text-align: center;
+    margin: 70px auto 10px auto;
+    color: white;
+    background: #993300;
+    width: 100%;
+    font-size: 20px;
+    padding: 5px;
+    border: 5px solid #000066;
+    font-weight: 700;
+    text-transform: uppercase; 
+    font-weight: 300;
+}
+#submit:hover
+{
+    background-color: #F7CA18;
+}
+#submit:focus
+{
+	background-color: rgb(236, 15, 15);
+}
+#CR-form-heading
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: linear-gradient(#993300, #000066);
+}
+.form-group
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 33%;
+    min-height: 400px; 
+    padding: 20px 40px 30px 40px;
+    background: #1c1e21;
+    color: white;
+    
+}
+.form-control:focus
+{
+    border:2px solid #F7CA18;
+    box-shadow:none;
+}
+input.form-control
+{
+    background-color: rgba(237, 235, 250, 0.1);
+    color: #FFF;
+}
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    color: #F7CA18;
+    size: 2px;
+  }
