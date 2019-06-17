@@ -1,99 +1,89 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Class Represtative</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
-        <!-- <script src="main.js"></script> -->  
+        <title>Class Repreasentative</title>
+        <link rel="stylesheet" href="/home/ajitesh/cse-branch-website/css/cr-form/new-form.css">
     </head>
-    <body style="font-size: 120%;
-	            font-weight: 700;
-	            margin-left: auto;
-	            background: #f7ede5;
-	            text-transform: capitalize;
-	            color: #c1bdba;
-	            letter-spacing: 2px;">
-        <form id="CR-form" style="margin-left: auto;
-                                margin-right: auto; 
-                                width: 830px;
-                                min-height: 670px;
-                                background-color:#292930;
-                                border-radius: 25px;">
-            <h1 id="CR-form-heading" align="center" style="text-align: center;
-                                                        letter-spacing: 5px;
-                                                        padding: 20px;
-                                                        color: #c1bdba">
-            <b><u>Registration&nbsp;for&nbsp;Class&nbsp;Representative</u></b></h1>
-            
-            <hr>
+    <body>
+        <form class="form-group">
+        <center>
+        <h1 id="CR-form-heading"><b><u>Registration&nbsp;for&nbsp;Class&nbsp;Representative</u></b></h1>
+        </center>
+        <hr>
 
-            <div class="form group" style="margin-left: auto;
-                                            margin-right: auto;
-                                            width: 450px;
-                                            min-height: 400px; 
-                                            padding: 20px 40px 30px 40px;">
-            
-            <div style="padding: 7px;">
-                <h3><b>Name</b></h3>
+        <div id="form">
+    
+            <div>
+                <h3><big>Name:</big></h3>
             </div>
-            
-            <div style="padding: 7px;">
+    
+            <div>
+                <table>
+                    <tr>
+                        <th class="form-control" id="first-name"> <input type="text" class="form-control"> </th>
+                        <th> <input type="text" class="form-control"> </th>
+                    </tr>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last name</th>
+                    </tr>
+                </table>
+            </div>
+    
+            <br>
+
+            <div>
+                <h3><big>Birth Date:</big></h3>
+            </div>
+        
+            <div >
+                <input type="date" class="form-control">
+            </div>
+
+            <br>
+    
+            <div>
+                <h3><big>E-mail:</big></h3>
+            </div>
+    
+            <div>
                 <span>
-                    <input type="text" size="20" placeholder="First Name">
-                    <input type="text" size="20" placeholder="Last Name">
+                    <input type="email" size="50" placeholder="ex: myname@example.com" class="form-control">
                 </span>
             </div>
-            
-            <br>
-
-            <div style="padding: 7px;">
-                <h3><b>Birth Date:</b></h3>
-            </div>
-            <div style="padding: 7px;">
-                <input type="date">
-            </div>
 
             <br>
-            
-            <div style="padding: 7px;">
-                <h3><b>E-mail</b></h3>
+
+            <div>
+                <h3><big>Phone Number:</big></h3>
             </div>
-            
-            <div style="padding: 7px;">
+
+            <div>
                 <span>
-                    <input type="email" size="50" placeholder="ex: myname@example.com">
-                </span>
-            </div>
-            <br>
-            <div style="padding: 7px;">
-                <h3><b>Phone Number</b></h3>
-            </div>
-            <div style="padding: 7px;">
-                <span>
-                    <input type="text" size="10" value="+91">
+                    <input type="text" size="10" value="+91" class="form-control">
                 </span>
                 -
                 <span>
-                    <input type="number" size="50" placeholder="Phone Number">
+                    <input type="number" size="50" placeholder="Phone Number" class="form-control">
                 </span>
             </div>
+        
             <br>
-            <div style="padding: 7px;">
-                <h3><b>I am a</b></h3>
+        
+            <div>
+                <h3><big>I am a:</big></h3>
             </div>
-            <span style="padding: 7px;">
+            <span>
                 <input type="radio" name="nationality" value="Indian">Indian
             </span>
-            <span style="padding: 7px;">
+            <span>
                 <input type="radio" name="nationality" value="Non-Indian">Non-Indian
             </span>
             <br>
             <br>
-            <div style="padding: 7px;">
-                <h3><b>If Indian:</b></h3>
-                <select>
+            <div>
+            <h3><big>If Indian:</big></h3>
+            <select style="background-color: rgba(237, 235, 250, 0.1);">
                     <option>Andaman & Nicobar Islands</option><br>
                     <option>Andhra Pradesh</option><br>
                     <option>Arunachal Pradesh</option><br>
@@ -134,94 +124,58 @@
             </div>
 
             <br>
-             <br>
+            <br>
             <div>
-                <center>
-                <b>The following Questions are meant to be answered with the best of your knowledge and on the basis of this<br>
-                    interview Questions will be asked by your seniors and then voting will be carried out to elect the Class Representative.<br>
-                    THE ONE WITH THE HIGEST NUMBER OF VOTES WILL BE THE CLASS REPRESENTATIVE
-                <b> 
-                </center>
+                The following Questions are meant to be answered with the best of your knowledge and on the basis of this
+                interview Questions will be asked by your seniors and then voting will be carried out to elect the Class Representative.<br>
+                <b>THE ONE WITH THE HIGEST NUMBER OF VOTES WILL BE THE CLASS REPRESENTATIVE</b>
             </div>
-           
-			
+   
+    
             <div>
-                <center><h3><b>What is your Hobby?</b></h3></center>
+                <h3><big>What is your Hobby?</big></h3>
             </div>
 
             <div>
-                <center>
-                <textarea rows="5" cols="60" placeholder="Give a Descriptive answer on what you enjoy doing the most!"></textarea>
-                </center>
+                <textarea class="form-control" rows="5" cols="60" placeholder="Give a Descriptive answer on what you enjoy doing the most!" style="background-color: rgba(237, 235, 250, 0.1); color: #FFF"></textarea>
+            </div>
+
+            <div>
+                <h3><big>Why do you want to be the Class Representative(CR) ?</big>
             </div>
 
             <div >
-                <center>
-                    <h3><b>Why do you want to be the Class Representative(CR) ?</b>
-                </center>
+                <textarea class="form-control" rows="5" cols="60" placeholder="Give a Descriptive answer!" style="background-color: rgba(237, 235, 250, 0.1); color: #FFF"></textarea>
+            </div>
+    
+            <div >
+                <h3><big>How will you convinve your classmates to vote for you?</big></h3>
             </div>
 
             <div >
-                <center>
-                <textarea rows="5" cols="60" placeholder="Give a Descriptive answer!"></textarea>
-                </center>
+                <textarea class="form-control" rows="5" cols="60" placeholder="Show your confidence!" class="form-control" style="background-color: rgba(237, 235, 250, 0.1); color: #FFF"></textarea>
             </div>
 
             <div >
-                <center>
-                    <h3><b>How will you convinve your classmates to vote for you?</b></h3>
-                </center>
+                <h3><big>Any Previous Experience of leadership ? If yes then, decribe how did it went?</big>
             </div>
 
             <div >
-                <center>
-                <textarea rows="5" cols="60" placeholder="Show your confidence!"></textarea>
-                </center>
+                <textarea class="form-control" rows="5" cols="60" placeholder="NO LIES!!!" class="form-control" style="background-color: rgba(237, 235, 250, 0.1); color: #FFF"></textarea>
+            </div>
+
+            <div>
+                <h3><big>Now tell us about your college crush?</big></h3>
             </div>
 
             <div >
-                <center>
-                    <h3><b>Any Previous Experience of leadership ? If yes then, decribe how did it went?</b>
-                </center>
+                <textarea class="form-control" rows="5" cols="60" placeholder="MANDATORY TO ANSWER!" class="form-control" style="background-color: rgba(237, 235, 250, 0.1); color: #FFF"></textarea>
             </div>
-
-            <div >
-                <center>
-                <textarea rows="5" cols="60" placeholder="NO LIES!!!"></textarea>
-                </center>
-            </div>
-
-            <div style="padding: 7px;">
-                <center>
-                    <h3><b>Now tell us about your college crush?</b></h3>
-                </center>
-            </div>
-
-            <div >
-                <center>
-                <textarea rows="5" cols="60" placeholder="MANDATORY TO ANSWER!"></textarea>
-                </center>
-            </div>
-            
+    
             <br>
 
-            <div style="padding: 7px;">
-                <center>
-                <input type="Submit" style="display: block; 
-                text-align: center;
-                margin: 70px auto 10px auto;
-                color: white;
-                border-radius: 40px;
-                background: #1ab188;
-                width: 100px;
-                font-size: 20px;
-                padding: 5px;
-                border: 2px solid white;
-                font-weight: 700;
-                text-transform: uppercase;" >
-                </center>
+            <div>
+                <button type="submit" id="submit">Submit</button>
             </div>
         </div>            
-        </form>
-    </body>
-</html>
+    </form>
