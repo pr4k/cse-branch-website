@@ -16,3 +16,6 @@ class Document(models.Model):
     bio = models.CharField(max_length=255, blank=True)
     upload = models.ImageField(upload_to=user_directory_path)
     uploaded_at = models.DateTimeField(auto_now_add=True)
+
+class Email(models.Model):
+    email=models.EmailField()

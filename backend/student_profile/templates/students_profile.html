@@ -12,116 +12,63 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .btn{
+            vertical-align: 0%;
+        }
+    </style>
     </head>
     <body>
-
-            <div class="container mt-40">
-                    <h1 class="text-center">2018 Batch</h1>
-                    <div class="row mt-30">
-                        <div class="col-md-4 col-sm-6">
-                            <div class="box16">
-                                <img src="{% static 'img/college_events/prakhar.jpg' %}">
-                                <div class="box-content">
-                                    <h3 class="title">Prakhar</h3>
-                                    <span class="post">B118038</span>
-                                    <ul class="social">
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="box16">
-                                <img src="http://bestjquery.com/tutorial/hover-effect/demo118/images/img-2.jpg">
-                                
-                                <div class="box-content">
-                                    <h3 class="title">Kristiana</h3>
-                                    <span class="post">Web Designer</span>
-                                    <ul class="social">
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="box16">
-                                <img src="{% static 'img/college_events/ajitesh.jpg' %}">
-                                <div class="box-content">
-                                    <h3 class="title">Ajitesh</h3>
-                                    <span class="post">B118008</span>
-                                    <ul class="social">
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-     
-        <!------------------ Hover Effect Style : Demo - 16 --------------->
-     
-      
-            <div class="row mt-30">
-                <div class="col-md-4 col-sm-6">
-                    <div class="box16">
-                        <img src="{% static 'img/college_events/prakhar.jpg' %}">
-                        <div class="box-content">
-                            <h3 class="title">Prakhar</h3>
-                            <span class="post">B118038</span>
-                            <ul class="social">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="box16">
-                        <img src="http://bestjquery.com/tutorial/hover-effect/demo118/images/img-2.jpg">
-                        
-                        <div class="box-content">
-                            <h3 class="title">Kristiana</h3>
-                            <span class="post">Web Designer</span>
-                            <ul class="social">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="box16">
-                        <img src="{% static 'img/college_events/ajitesh.jpg' %}">
-                        <div class="box-content">
-                            <h3 class="title">Ajitesh</h3>
-                            <span class="post">B118008</span>
-                            <ul class="social">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {% for i in data|length|get_range %}
-            <h1>{{ data|length }}</h1>
-            {% endfor %}
             
+        <div class="btn">
+                    <a href="/students/upload" style="position:top">
+                        <button>Upload your photo</button>
+                     </a>
+            </div>
+            <div class="row mt-30">
+            {% if set|length != 0 %}
+            {% for i in set %}
+            
+            {% for j in i %}
+            <div class="col-md-4 col-sm-6">
+                    <div class="box16">
+                        <img src= "{% static  j.upload|get_path  %}">
+                        <div class="box-content">
+                            <h3 class="title">{{ j.name }}</h3>
+                            <span class="post">{{ j.email|id_extract}}</span>
+                            <ul class="social">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="www.instagram.com/{{ j.insta_handle }}"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                {% endfor %}
+            {% endif %}
+            {% for i in remaining %}
+            <div class="col-md-4 col-sm-6">
+                    <div class="box16">
+                        <img src=" {% static  i.upload|get_path  %}">
+                        <div class="box-content">
+                            <h3 class="title">{{ i.name }}   </h3>
+                            <span class="post">{{i.email|id_extract}}</span>
+                            <ul class="social">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://www.instagram.com/{{ j.insta_handle }}"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
         </div>
+
+        </div>
+    
         
 
     </body>
