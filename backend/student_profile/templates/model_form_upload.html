@@ -1,9 +1,12 @@
 {% block content %}
+{% if err == 1 %}
+<h1>Sorry wrong email, use college email</h1>
+{% endif %}
   <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Upload</button>
+    <button type="submit">submit</button>
   </form>
 
-  <p><a href="{% url 'index' %}">Return to home</a></p>
+  <p><a href="{% url 'studentpage' %}">Return to Students Page</a></p>
 {% endblock %}

@@ -33,6 +33,7 @@ def model_form_upload(request,code,email):
             if request.method == 'POST':
                 form = DocumentForm(request.POST, request.FILES)
                 if form.is_valid():
+
                     form.save()
                     
             else:
@@ -50,14 +51,21 @@ def Email_checker(request):
         form = EmailForm(request.POST, request.FILES)
         if form.is_valid():
             email=form.cleaned_data.get('email')
-            code='%32x' % random.getrandbits(16*8)
-            send_mail(code,email)
-            insert(email.split("@")[0],code)
+            if email.split("@")[-1]=="iiit-bh.ac.in" and email.split("@")[0][:4].upper()=="B118":
+                code='%32x' % random.getrandbits(16*8)
+                send_mail(code,email)
+                insert(email.split("@")[0],code)
+            else:
+                form = EmailForm()
+                return render(request, 'model_form_upload.html', {
+                    'form': form,"err":1
+                })
+
             
     else:
         form = EmailForm()
     return render(request, 'model_form_upload.html', {
-        'form': form
+        'form': form,"err":0
     })
 
 
