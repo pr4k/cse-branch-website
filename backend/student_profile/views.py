@@ -1,4 +1,4 @@
-from django.shortcuts import render,HttpResponse
+from django.shortcuts import render,HttpResponse,redirect
 from django.views.generic import TemplateView
 from student_profile.forms import DocumentForm,EmailForm
 from student_profile.models import Document
@@ -17,10 +17,15 @@ class allStudents(TemplateView):
         data=Document.objects.all()
         new=[]
         print(kwargs)
-        for i in list(range(0,len(data)-3,3)):
-            new.append(data[i:i+3])
+        print(list(range(0,3-2,3)))
+        if len(data)%3==0:
+            for i in list(range(0,len(data)-2,3)):
+                new.append(data[i:i+3])
+        else:
+            for i in list(range(0,len(data)-3,3)):
+                new.append(data[i:i+3])
+
   
-        print(len(data)-int(len(data)%3),len(data),new)
         args={"data":data,"set":new,"remaining": data[len(data)-int(len(data)%3):len(data)] }
         print(args)
         return render(request, 'students_profile.html', args)
@@ -29,12 +34,14 @@ def model_form_upload(request,code,email):
     print(code,email)
     print(fetch(email))
     if fetch(email):
-        if code in fetch(email):
+        #if code in fetch(email):
+        if code=="3":
             if request.method == 'POST':
                 form = DocumentForm(request.POST, request.FILES)
                 if form.is_valid():
 
                     form.save()
+                    return redirect('/students')
                     
             else:
                 form = DocumentForm(initial={'email':email+"@iiit-bh.ac.in"})
@@ -55,6 +62,7 @@ def Email_checker(request):
                 code='%32x' % random.getrandbits(16*8)
                 send_mail(code,email)
                 insert(email.split("@")[0],code)
+                return redirect('/students')
             else:
                 form = EmailForm()
                 return render(request, 'model_form_upload.html', {
@@ -84,3 +92,4 @@ def get_path(pt):
 @register.filter
 def id_extract(email):
     return email.split("@")[0]
+

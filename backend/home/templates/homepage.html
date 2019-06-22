@@ -1,120 +1,183 @@
 
-<html><head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Title here</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% load static %}
+<title>Freshers party</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
 
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
-    <!--[if lt IE 9]>
-      <script src="js/html5shiv.js"></script>
-      <script src="js/respond.min.js"></script>
-    <![endif]-->
+<!-- bootstrap-css -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--// bootstrap-css -->
+<!-- css -->
+<link rel="stylesheet" href="{% static 'css/homepage3/style.css' %}" type="text/css" media="all" />
+
+<link rel="stylesheet" href="{% static 'css/homepage3/flexslider.css' %}" type="text/css" media="screen" property="" />
 
 
-    <!--headerIncludes-->
-{% load static %}
-	<!-- css files -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" href="{% static '/css/homepage/style.css' %}" type="text/css" media="all"> <!-- Style-CSS --> 
-	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}"> <!-- Font-Awesome-Icons-CSS -->
-	<!-- //css files -->
-	
-	<!-- google fonts -->
-	<link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet">
-	<!-- //google fonts -->
 
+<!--// css -->
+<!-- font-awesome icons -->
+
+<!-- //font-awesome icons -->
+<!-- font -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600,700" rel="stylesheet">
+<!-- //font -->
+<script src="{% static 'js/jshome/jquery-2.2.3.min.js' %}"></script>
+<script src="{% static 'js/jshome/bootstrap.js' %}"></script>
 <style>
-#home{
-	background-image: url( "{% static 'img/homepage/front.jpg' %}");
-}
-
-</style>	
+		.w3-banner{
+			background: url("{%static '/img/homepage/banner.jpg' %}");
+			background-size: 100% 100%; 
+			-webkit-background-size: cover; 
+			-moz-background-size: cover; 
+			-o-background-size: cover; 
+			-ms-background-size: cover; 
+		}
+</style>
 </head>
-
+<body style="background-image:url({%static '/img/homepage/banner.jpg' %});
+  background-position: center center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;">
 	
-<body>
 
-    <div id="page" class="page"><!-- //header -->
-<header>	
-	<div class="container">
-		<!-- nav -->
-		<nav class="py-md-4">
-        <div id="logo">
-			<h1> <a href="" class="editContent" style="color: rgb(255, 255, 255); font-size: 25px; background-color: rgba(0, 0, 0, 0); font-family: &quot;Lato&quot;, sans-serif; outline: 2px solid rgba(233, 94, 94, 0.5); outline-offset: -2px; cursor: pointer;"><span class="fa fa-glass" aria-hidden="true" style="outline: medium none currentcolor; cursor: inherit;"></span><u> Par<i>ty Time</i></u><span class="block editContent" style="outline: medium none currentcolor; cursor: inherit;"></span></a></h1>
-		</div>
+		<div class="wthree-different-dot">
+			<div class="head">
+				<div class="container">
+					<div class="navbar-top">
+							<!-- Brand and toggle get grouped for better mobile display -->
+							<div class="navbar-header">
+							  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							  </button>
+								 <div class="navbar-brand logo ">
+									<h1><a href="{% url 'index' %}">Party Time</a></h1>
+								</div>
 
-        <label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
-        <input id="drop" type="checkbox">
-            <ul class="menu mt-md-3">
-                <li class="mr-lg-4 mr-3 active"><a href="" style="color: rgb(255, 255, 255); font-weight: 700; text-transform: uppercase;">HOME</a></li>
-                <li class="mr-lg-4 mr-3">
-                <!-- First Tier Drop Down -->
-                <label for="drop-2" class="toggle">Dropdown <span class="fa fa-angle-down" aria-hidden="true" style="outline: none; cursor: inherit;"></span> </label>
-                <a href="#" style="color: rgb(255, 255, 255); font-weight: 700; text-transform: uppercase;">Dropdown <span class="fa fa-angle-down" aria-hidden="true"></span></a>
-                <input id="drop-2" type="checkbox">
-                <ul class="drop-down">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="/events" style="outline: medium none currentcolor; cursor: inherit;">Events</a></li>
-                    <li><a href="forms/cr_elections" style="color: rgb(51, 51, 51); font-weight: 700; text-transform: uppercase; outline: medium none currentcolor; cursor: inherit;">FORMS</a></li>
-                    <li><a href="/students" style="color: rgb(51, 51, 51); font-weight: 700; text-transform: uppercase;">STUDENT PROFILES</a></li>
-                    
-                </ul>
-                </li>
-                <li class="mr-lg-4 mr-3"><a href="#contact" style="color: rgb(255, 255, 255); font-weight: 700; text-transform: uppercase;">CONTACT</a></li>
-                <li class="mr-3 icons"><a href="#" style="outline: medium none currentcolor; cursor: inherit;"></a></li>
-                <li class="mr-3 icons"><a href="#" style="outline: medium none currentcolor; cursor: inherit;"></a></li>
-                
-                <li class=" icons"><a href="#" style="outline: medium none currentcolor; cursor: inherit;"></a></li>
-            </ul>
-        </nav>
-		<!-- //nav -->
-	</div>
-</header>
-<!-- //header -->
-		
-<!-- banner -->
-<section class="banner bg bg1" id="home" style=" background-color: rgba(0, 0, 0, 0); margin-top: 0px;  ">
-	<div class="banner-layer">
-		<div class="container">
-			<div class="w3pvt_banner_info text-center">
-				<div class="w3layouts_banner_margin">
-					<h3 class="editContent" style="color: rgb(255, 153, 0); font-size: 80px; font-family: &quot;lato&quot;, sans-serif; background-color: rgba(0, 0, 0, 0);"><b>2019 </b></h3>
-					<h2 class="editContent" style="color: rgb(255, 253, 0); font-size: 90px; background-color: rgba(0, 0, 0, 0); font-family: serif;">WELCOME!!<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FRESHERS<br></h2>
-					<h4 class="editContent" style="color: rgb(255, 255, 255); font-size: 30px; background-color: rgba(0, 0, 0, 0); font-family: &quot;Lato&quot;, sans-serif;"><b>Are you All ready to Experience this day!!</b><br></h4>
-					<a href="#events" class="btn" style="border-radius: 0px; font-size: 20px; background-color: rgb(255, 0, 0);">EXPLORE NOW!!</a>
+							</div>
+
+							<!-- Collect the nav links, forms, and other content for toggling -->
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							 <ul class="nav navbar-nav link-effect-4">
+								<li class=" first-list"><a href="{% url 'index' %}">Home</a></li>
+								<li class=" first-list"><a href="{% url 'events' %}">events</a></li>
+								<li class=" first-list"><a href="{% url 'studentpage' %}">student gallery</a></li>
+
+								
+								<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span data-letters="Pages">Forms</span><span class="caret"></span></a>
+									<ul class="dropdown-menu"> 
+											<li class=" first-list"><a href="{% url 'crform' %}">CR FORM</a></li>
+											<li class=" first-list"><a href="{% url 'cseform' %}">Mr and Miss CSE</a></li>
+			
+												
+									</ul>
+								</li>   
+								
+					
+
+                                                 	  </ul>
+							</div><!-- /.navbar-collapse -->
+						</div>
 				</div>
 			</div>
-			<!-- To bottom button-->
-			<div class="thim-click-to-bottom mt-5 pt-md-5">
-				<div class="rotate">
-					<a href="#about" class="scroll">
-						<span class="fa fa-arrow-circle-down" style="color: rgb(255, 255, 255); font-size: 40px;" id="ui-id-2"></span>
-					</a>
+			<!-- banner -->
+			<div class="banner">
+				<div class="container">
+					<div class="slider">
+						
+						<script src="{% static 'js/jshome/responsiveslides.min.js' %}"></script>
+						<script>
+								// You can also use "$(window).load(function() {"
+								$(function () {
+								// Slideshow 4
+									$("#slider3").responsiveSlides({
+										auto: true,
+										pager: true,
+										nav: true,
+										speed: 500,
+										namespace: "callbacks",
+										before: function () {
+											$('.events').append("<li>before event fired.</li>");
+										},
+										after: function () {
+											$('.events').append("<li>after event fired.</li>");
+										}
+									 });				
+								});
+						</script>
+						<div  id="top" class="callbacks_container-wrap">
+							<ul class="rslides" id="slider3">
+								<li>
+									<div class="slider-info" data-aos="fade-left">
+									<h6>IT'S FRESHERS' TIME!!</h6>
+										<h3>WELCOME FRESHERS 2019
+</h3>
+									
+										<div class="more-button">
+											<a href="#" data-toggle="modal" data-target="#myModal">More Info</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="slider-info" data-aos="fade-left">
+									<h6>IT'S FRESHERS' TIME!!</h6>
+										<h3>ARE YOU ALL EXCITED?</h3>
+										
+										<div class="more-button">
+											<a href="#" data-toggle="modal" data-target="#myModal">More Info</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="slider-info" data-aos="fade-left">
+									<h6>IT'S FRESHERS' TIME!!</h6>
+										<h3> ENJOY THIS DAY LIKE HELL!</h3>
+									
+										<div class="more-button">
+											<a href="#" data-toggle="modal" data-target="#myModal">More Info</a>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
-			<!-- //To bottom button-->
+
+	</div>
+	<!-- //w3-banner -->
+
+
+	<!-- modal -->
+	<div class="modal about-modal fade" id="myModal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header"> 
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						<h4 class="modal-title">Freshers' Party</h4>
+					</div> 
+					<div class="modal-body">
+					<div class="agileits-w3layouts-info">
+						<img src="img/g1.jpg" alt="" />
+						<p>Welcome fellas!After the gruelling and tough days of examinations,now the time comes to enjoy all the hardwork you all have done to acheive success.We all know what it takes to acheive in these exams (especially JEE!! Oh man!How can we forget the endless days spent on doing H.C Verma),so we value your hardwork and perseverance.But you should feel proud of yourselves that you all are in the best branch of IIIT-Bh which gives you even more opportunities to succeed further.
+Anyways now is the time to enjoy your days in college and make new friends.So do have active participation in all events in college and enjoy your freshers day.
+Remember lots of fun are coming your way!  </p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
-</section>
-<!-- //banner -->	
-
-<!-- about -->
-
-<!-- about -->
-
-
+	<!-- //modal -->
+	
  
-<!-- events -->
-
-<!-- //events -->
-
-
-
- <!-- contact -->
-    
-    <!-- //contact -->
-</div>
-	
-
-
-</body></html>
+</body>	
+</html>

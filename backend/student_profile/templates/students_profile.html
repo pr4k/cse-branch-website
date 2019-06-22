@@ -1,4 +1,6 @@
 {% load static %}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -25,6 +27,10 @@
                         <button>Upload your photo</button>
                      </a>
             </div>
+            
+            {% with index='a' %}
+                                            <h1>{{ index }}</h1>
+                                            {% endwith %}
             <div class="row mt-30">
             {% if set|length != 0 %}
             {% for i in set %}
@@ -32,7 +38,7 @@
             {% for j in i %}
             <div class="col-md-4 col-sm-6">
                     <div class="box16">
-                        <img src= "{% static  j.upload|get_path  %}">
+                        <img src= "{% static  j.upload|get_path  %}" height="42" width="42">
                         <div class="box-content">
                             <h3 class="title">{{ j.name }}</h3>
                             <span class="post">{{ j.email|id_extract}}</span>
