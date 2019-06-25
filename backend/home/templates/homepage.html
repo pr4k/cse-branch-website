@@ -4,7 +4,7 @@
 <head>
 	{% load static %}
 <title>Freshers party</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
 <meta charset="utf-8">
 
 <!-- bootstrap-css -->
@@ -29,23 +29,11 @@
 <!-- //font -->
 <script src="{% static 'js/jshome/jquery-2.2.3.min.js' %}"></script>
 <script src="{% static 'js/jshome/bootstrap.js' %}"></script>
-<style>
-		.w3-banner{
-			background: url("{%static '/img/homepage/banner.jpg' %}");
-			background-size: 100% 100%; 
-			-webkit-background-size: cover; 
-			-moz-background-size: cover; 
-			-o-background-size: cover; 
-			-ms-background-size: cover; 
-		}
-</style>
+
 </head>
-<body style="background-image:url({%static '/img/homepage/banner.jpg' %});
-  background-position: center center;
-background-repeat: no-repeat;
-background-attachment: fixed;
-background-size: cover;">
-	
+
+<body>
+<img src="{%static 'img/homepage/banner.jpg' %}" id="bg" alt="">
 
 		<div class="wthree-different-dot">
 			<div class="head">
@@ -72,28 +60,31 @@ background-size: cover;">
 								<li class=" first-list"><a href="{% url 'events' %}">events</a></li>
 								<li class=" first-list"><a href="{% url 'studentpage' %}">student gallery</a></li>
 
-								
+
 								<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span data-letters="Pages">Forms</span><span class="caret"></span></a>
-									<ul class="dropdown-menu"> 
+									<ul class="dropdown-menu">
 											<li class=" first-list"><a href="{% url 'crform' %}">CR FORM</a></li>
 											<li class=" first-list"><a href="{% url 'cseform' %}">Mr and Miss CSE</a></li>
-			
-												
+
+
 									</ul>
-								</li>   
-								
-					
+								</li>
+
+
 
                                                  	  </ul>
 							</div><!-- /.navbar-collapse -->
 						</div>
 				</div>
 			</div>
+			<br>
+			<br>
+			<br>
 			<!-- banner -->
 			<div class="banner">
 				<div class="container">
 					<div class="slider">
-						
+
 						<script src="{% static 'js/jshome/responsiveslides.min.js' %}"></script>
 						<script>
 								// You can also use "$(window).load(function() {"
@@ -111,7 +102,7 @@ background-size: cover;">
 										after: function () {
 											$('.events').append("<li>after event fired.</li>");
 										}
-									 });				
+									 });
 								});
 						</script>
 						<div  id="top" class="callbacks_container-wrap">
@@ -121,7 +112,7 @@ background-size: cover;">
 									<h6>IT'S FRESHERS' TIME!!</h6>
 										<h3>WELCOME FRESHERS 2019
 </h3>
-									
+
 										<div class="more-button">
 											<a href="#" data-toggle="modal" data-target="#myModal">More Info</a>
 										</div>
@@ -131,7 +122,7 @@ background-size: cover;">
 									<div class="slider-info" data-aos="fade-left">
 									<h6>IT'S FRESHERS' TIME!!</h6>
 										<h3>ARE YOU ALL EXCITED?</h3>
-										
+
 										<div class="more-button">
 											<a href="#" data-toggle="modal" data-target="#myModal">More Info</a>
 										</div>
@@ -141,7 +132,7 @@ background-size: cover;">
 									<div class="slider-info" data-aos="fade-left">
 									<h6>IT'S FRESHERS' TIME!!</h6>
 										<h3> ENJOY THIS DAY LIKE HELL!</h3>
-									
+
 										<div class="more-button">
 											<a href="#" data-toggle="modal" data-target="#myModal">More Info</a>
 										</div>
@@ -161,10 +152,10 @@ background-size: cover;">
 	<div class="modal about-modal fade" id="myModal" tabindex="-1" role="dialog">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
-				<div class="modal-header"> 
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 						<h4 class="modal-title">Freshers' Party</h4>
-					</div> 
+					</div>
 					<div class="modal-body">
 					<div class="agileits-w3layouts-info">
 						<img src="img/g1.jpg" alt="" />
@@ -177,7 +168,7 @@ Remember lots of fun are coming your way!  </p>
 		</div>
 	</div>
 	<!-- //modal -->
-	
- 
-</body>	
+
+
+</body>
 </html>
