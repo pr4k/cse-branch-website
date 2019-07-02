@@ -1,3 +1,5 @@
+{% extends "homepage.html" %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,11 +18,18 @@
 
 </head>
 <body background="{% static 'img/application/pro-cr-form-bg.jpg' %}">
+
+	{% block image %} 
+	<img src="{% static 'img/application/pro-cr-form-bg.jpg' %}" id="bg" alt=""style=" z-index: -50;">
+	
+{% endblock %}
+
+{% block body %}
 	<div class="w3ls-banner">
 	<div class="heading">
 		<h1>FORM FOR Mr.CSE & Ms.CSE</h1>
 	</div>
-		<div class="container">
+		<div class="the-box">
 			<div class="heading">
 				<h2>Please Enter Your Details</h2>
 				<p>Fill the application form below and submit.</p>
@@ -290,5 +299,7 @@
 			</div>
 		</div>
 	</div>
+{% endblock %}
+
 </body>
 </html>

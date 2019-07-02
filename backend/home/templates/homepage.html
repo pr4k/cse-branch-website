@@ -1,174 +1,193 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
+	
 	{% load static %}
-<title>Freshers party</title>
-<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
-<meta charset="utf-8">
+{% block css %}
+	<title>Freshers party</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
+    <meta charset="utf-8">
 
-<!-- bootstrap-css -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<!--// bootstrap-css -->
-<!-- css -->
-<link rel="stylesheet" href="{% static 'css/homepage3/style.css' %}" type="text/css" media="all" />
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<link rel="stylesheet" href="{% static 'css/homepage3/flexslider.css' %}" type="text/css" media="screen" property="" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		 
 
+		 <link rel="stylesheet" href="{% static 'css/cr-form/pro-cr-form.css' %}" type="text/css" media="all">
+		 <style>
+				.btn{
+					vertical-align: 0%;
+				}
+			</style>
 
+    <!-- bootstrap-css -->
 
-<!--// css -->
-<!-- font-awesome icons -->
+    <!--// bootstrap-css -->
+    <!-- css -->
+    <link rel="stylesheet" href="{% static 'css/homepage3/style.css' %}" type="text/css" media="all" />
 
-<!-- //font-awesome icons -->
-<!-- font -->
-<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600,700" rel="stylesheet">
-<!-- //font -->
-<script src="{% static 'js/jshome/jquery-2.2.3.min.js' %}"></script>
-<script src="{% static 'js/jshome/bootstrap.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/homepage3/flexslider.css' %}" type="text/css" media="screen" property="" />
 
+    <!--// css -->
+    <!-- font-awesome icons -->
+
+    <!-- //font-awesome icons -->
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600,700" rel="stylesheet">
+    <!-- //font -->
+    <script src="{% static 'js/jshome/jquery-2.2.3.min.js' %}"></script>
+	<script src="{% static 'js/jshome/bootstrap.js' %}"></script>
+	<link rel="stylesheet" href="{% static 'css/college_events/event.css' %}">
+{% endblock %}
 </head>
 
 <body>
-<img src="{%static 'img/homepage/banner.jpg' %}" id="bg" alt="">
 
-		<div class="wthree-different-dot">
-			<div class="head">
-				<div class="container">
+		{% block image %} 
+		<img src="{%static 'img/homepage/banner.jpg' %}" id="bg" alt="" style=" z-index: -50;">
+		
+	{% endblock %}
+
+		{% block navbar %}
+		<div class="head">
+			
+				<div class="the-box">
 					<div class="navbar-top">
-							<!-- Brand and toggle get grouped for better mobile display -->
-							<div class="navbar-header">
-							  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 								<span class="sr-only">Toggle navigation</span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
-							  </button>
-								 <div class="navbar-brand logo ">
-									<h1><a href="{% url 'index' %}">Party Time</a></h1>
-								</div>
-
+							</button>
+							<div class="navbar-brand logo ">
+								<h1><a href="{% url 'index' %}">Party Time</a></h1>
 							</div>
-
-							<!-- Collect the nav links, forms, and other content for toggling -->
-							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-							 <ul class="nav navbar-nav link-effect-4">
+		
+						</div>
+		
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav link-effect-4">
 								<li class=" first-list"><a href="{% url 'index' %}">Home</a></li>
 								<li class=" first-list"><a href="{% url 'events' %}">events</a></li>
 								<li class=" first-list"><a href="{% url 'studentpage' %}">student gallery</a></li>
-
-
+		
 								<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span data-letters="Pages">Forms</span><span class="caret"></span></a>
 									<ul class="dropdown-menu">
-											<li class=" first-list"><a href="{% url 'crform' %}">CR FORM</a></li>
-											<li class=" first-list"><a href="{% url 'cseform' %}">Mr and Miss CSE</a></li>
-
-
+										<li class=" first-list"><a href="{% url 'crform' %}">CR FORM</a></li>
+										<li class=" first-list"><a href="{% url 'cseform' %}">Mr and Miss CSE</a></li>
+		
 									</ul>
 								</li>
-
-
-
-                                                 	  </ul>
-							</div><!-- /.navbar-collapse -->
-						</div>
-				</div>
-			</div>
-			<br>
-			<br>
-			<br>
-			<!-- banner -->
-			<div class="banner">
-				<div class="container">
-					<div class="slider">
-
-						<script src="{% static 'js/jshome/responsiveslides.min.js' %}"></script>
-						<script>
-								// You can also use "$(window).load(function() {"
-								$(function () {
-								// Slideshow 4
-									$("#slider3").responsiveSlides({
-										auto: true,
-										pager: true,
-										nav: true,
-										speed: 500,
-										namespace: "callbacks",
-										before: function () {
-											$('.events').append("<li>before event fired.</li>");
-										},
-										after: function () {
-											$('.events').append("<li>after event fired.</li>");
-										}
-									 });
-								});
-						</script>
-						<div  id="top" class="callbacks_container-wrap">
-							<ul class="rslides" id="slider3">
-								<li>
-									<div class="slider-info" data-aos="fade-left">
-									<h6>IT'S FRESHERS' TIME!!</h6>
-										<h3>WELCOME FRESHERS 2019
-</h3>
-
-										<div class="more-button">
-											<a href="#" data-toggle="modal" data-target="#myModal">More Info</a>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="slider-info" data-aos="fade-left">
-									<h6>IT'S FRESHERS' TIME!!</h6>
-										<h3>ARE YOU ALL EXCITED?</h3>
-
-										<div class="more-button">
-											<a href="#" data-toggle="modal" data-target="#myModal">More Info</a>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="slider-info" data-aos="fade-left">
-									<h6>IT'S FRESHERS' TIME!!</h6>
-										<h3> ENJOY THIS DAY LIKE HELL!</h3>
-
-										<div class="more-button">
-											<a href="#" data-toggle="modal" data-target="#myModal">More Info</a>
-										</div>
-									</div>
-								</li>
+		
 							</ul>
 						</div>
+						<!-- /.navbar-collapse -->
+				
 					</div>
 				</div>
-			</div>
-
-	</div>
-	<!-- //w3-banner -->
-
-
-	<!-- modal -->
-	<div class="modal about-modal fade" id="myModal" tabindex="-1" role="dialog">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title">Freshers' Party</h4>
-					</div>
-					<div class="modal-body">
-					<div class="agileits-w3layouts-info">
-						<img src="img/g1.jpg" alt="" />
-						<p>Welcome fellas!After the gruelling and tough days of examinations,now the time comes to enjoy all the hardwork you all have done to acheive success.We all know what it takes to acheive in these exams (especially JEE!! Oh man!How can we forget the endless days spent on doing H.C Verma),so we value your hardwork and perseverance.But you should feel proud of yourselves that you all are in the best branch of IIIT-Bh which gives you even more opportunities to succeed further.
-Anyways now is the time to enjoy your days in college and make new friends.So do have active participation in all events in college and enjoy your freshers day.
-Remember lots of fun are coming your way!  </p>
-					</div>
-				</div>
-			</div>
 		</div>
-	</div>
-	<!-- //modal -->
+		{% endblock %}
 
+		<!-- banner -->
+		{% block body %}
 
+        <br>
+        <br>
+        <br>
+		<div class="wthree-different-dot">
+        <div class="banner">
+            <div class="container">
+                <div class="slider">
+
+                    <script src="{% static 'js/jshome/responsiveslides.min.js' %}"></script>
+                    <script>
+                        // You can also use "$(window).load(function() {"
+                        $(function() {
+                            // Slideshow 4
+                            $("#slider3").responsiveSlides({
+                                auto: true,
+                                pager: true,
+                                nav: true,
+                                speed: 500,
+                                namespace: "callbacks",
+                                before: function() {
+                                    $('.events').append("<li>before event fired.</li>");
+                                },
+                                after: function() {
+                                    $('.events').append("<li>after event fired.</li>");
+                                }
+                            });
+                        });
+                    </script>
+                    <div id="top" class="callbacks_container-wrap">
+                        <ul class="rslides" id="slider3">
+                            <li>
+                                <div class="slider-info" data-aos="fade-left">
+                                    <h6>IT'S FRESHERS' TIME!!</h6>
+                                    <h3>WELCOME FRESHERS 2019</h3>
+
+                                    <div class="more-button">
+                                        <a href="#" data-toggle="modal" data-target="#myModal">More Info</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="slider-info" data-aos="fade-left">
+                                    <h6>IT'S FRESHERS' TIME!!</h6>
+                                    <h3>ARE YOU ALL EXCITED?</h3>
+
+                                    <div class="more-button">
+                                        <a href="#" data-toggle="modal" data-target="#myModal">More Info</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="slider-info" data-aos="fade-left">
+                                    <h6>IT'S FRESHERS' TIME!!</h6>
+                                    <h3> ENJOY THIS DAY LIKE HELL!</h3>
+
+                                    <div class="more-button">
+                                        <a href="#" data-toggle="modal" data-target="#myModal">More Info</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- //w3-banner -->
+
+    <!-- modal -->
+    <div class="modal about-modal fade" id="myModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Freshers' Party</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="agileits-w3layouts-info">
+                        <img src="img/g1.jpg" alt="" />
+                        <p>Welcome fellas!After the gruelling and tough days of examinations,now the time comes to enjoy all the hardwork you all have done to acheive success.We all know what it takes to acheive in these exams (especially JEE!! Oh man!How can we forget the endless days spent on doing H.C Verma),so we value your hardwork and perseverance.But you should feel proud of yourselves that you all are in the best branch of IIIT-Bh which gives you even more opportunities to succeed further. Anyways now is the time to enjoy your days in college and make new friends.So do have active participation in all events in college and enjoy your freshers day. Remember lots of fun are coming your way! </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //modal -->
+{% endblock %}
 </body>
+
 </html>

@@ -1,24 +1,21 @@
+{% extends "homepage.html" %}
 <!DOCTYPE html>
+
 {% load static %}
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
 <html lang="en">
 	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width:device-width, initial-scale=1,user-scalable=no">
-		<meta http-equiv="x-ua-compatible" content="ie=edge">
 
-		<link rel="stylesheet" href="{% static 'css/college_events/event.css' %}">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 			<title>EVENTS</title>
+
 	</head>
-	<body style="background-image:url({% static 'img/college_events/bg.png' %});
-background-position: center center;
-background-repeat: no-repeat;
-background-size: cover;">
+	<body >
 	<!-- card area -->
+	{% block image %}
+	<img src="{% static 'img/college_events/bg.png' %}" id="bg" alt="" style=" z-index: -50;">
+	{% endblock %}
+{% block body %}
 		<section>
 		
 			<div class=container-fluid>
@@ -266,6 +263,6 @@ background-size: cover;">
 					</div>
 			</div>
 		</section>
-	
+	{% endblock %}
 	</body>
 </html>		

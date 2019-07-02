@@ -1,3 +1,4 @@
+{% extends "homepage.html" %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,12 +16,20 @@
 	<link href="//fonts.googleapis.com/css?family=Alegreya+Sans:100,100i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
 
 </head>
-<body background="{% static 'img/application/pro-cr-form-bg.jpg' %}">
+<body>
+
+	{% block image %} 
+	<img src="{% static 'img/application/pro-cr-form-bg.jpg' %}" id="bg" alt=""style=" z-index: -50;">
+	
+{% endblock %}
+
+{% block body %}
+
 	<div class="w3ls-banner">
 	<div class="heading">
 		<h1>FORM FOR CLASS REPRESENTATIVE</h1>
 	</div>
-		<div class="container">
+		<div class="the-box">
 			<div class="heading">
 				<h2>Please Enter Your Details</h2>
 				<p>Fill the application form below and submit.</p>
@@ -286,5 +295,6 @@
 			</div>
 		</div>
 	</div>
+	{% endblock %}
 </body>
 </html>

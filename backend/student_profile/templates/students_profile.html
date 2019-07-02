@@ -1,33 +1,32 @@
+{% extends "homepage.html" %}
 {% load static %}
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
 <!------ Include the above in your HEAD tag ---------->
-<link href="{% static 'css/student_profile/student_profile.css' %}" rel="stylesheet" id="bootstrap-css">
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <title>The Batch</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        .btn{
-            vertical-align: 0%;
-        }
-    </style>
+
+ 
     </head>
     <body>
-            
+        	{% block image %}
+	<img src="{% static 'img/college_events/bg.png' %}" id="bg" alt="" style=" z-index: -50;">
+    {% endblock %}
+    
+    
+     {% block additional %}
         <div class="btn">
                     <a href="/students/email" style="position:top">
                         <button>Upload your photo</button>
                      </a>
             </div>
-            
+    {% endblock %}
+
+    {% block body %}
+    <link href="{% static 'css/student_profile/student_profile.css' %}" rel="stylesheet" id="bootstrap-css">
+
             {% with index='a' %}
                                             <h1>{{ index }}</h1>
                                             {% endwith %}
@@ -76,6 +75,6 @@
         </div>
     
         
-
+{% endblock %}
     </body>
 </html>
