@@ -1,0 +1,159 @@
+body{
+	margin:0;
+	padding:0;
+  background-image:linear-gradient(#000066,#993300);}
+div{overflow:hidden;}
+section{
+  margin:0;
+  padding: 0;
+      font-family:Cyberfall;
+	color:white; 
+}
+.container{
+	margin: 120px;
+}
+
+.container h1{
+
+    font-family:Cyberfall;
+    text-align:center;
+     font-size:45px;
+     
+     margin-bottom: 25px;
+	 padding-bottom:20px;
+	
+}
+.imgbox{
+		box-shadow: 0 10px 25px rgba(0,0,0,.8);
+     position:relative;border-radius: 30% 30%;
+	margin:20px auto;
+		max-width:300px;
+	width:240px;height:250px;
+	
+
+}.imgbox img{
+ height: 100%;
+	width:100%;
+}
+
+.profile h2{
+	font-size:22px;
+		font-weight:bold;
+	padding-top:12px;
+	padding-bottom:auto;
+	padding-left:auto;padding-right:auto;
+
+
+}.profile h3{
+	font-size:22px;
+		
+		font-weight:bold;
+		font-family:Arial;
+}
+.imgbox ul{
+	position:absolute;
+	margin:0 auto;
+	padding:0;
+	text-align:center;
+    width:100%;
+	display:flex;
+	background:rgba(0,0,0,0.2);
+		transform:translateY(50%);
+		transition:0.7s;
+}
+
+
+.imgbox:hover ul{
+	transform:translateY(-70px);	
+
+	
+}
+
+.imgbox ul li{
+	list-style:none;
+	box-sizing:border-box;
+	width:20%;
+	margin-left:9%;
+
+}
+
+.imgbox img:hover{
+	opacity: 0.5;
+
+}
+
+
+
+.imgbox ul li a{
+	color:#fff;
+	display:inline-block;
+	padding:0;
+	top:0;
+	margin:10px;
+	font-size:20.5px;
+	margin-left:19px;
+	width:39.5px;
+	margin:4px 4px;
+	height:32.5px;
+	justify-content:center;
+	align-items:center;
+
+}
+.imgbox ul li:hover:nth-child(1)
+{
+	background:#3b5999;color: white;
+}
+
+
+.imgbox ul li:hover:nth-child(2)
+{
+	background:#e4405f;color: white;
+}
+
+.imgbox ul li:hover:nth-child(3)
+{
+	background:#6cc644;color: white;
+}
+
+.main{
+	width:86%;
+	margin:20px auto;
+
+	text-align:center;
+	position:relative;
+	padding:auto 0;
+	
+}
+.m1{
+
+	float:left;
+	background:#000;
+	overflow:hidden;padding:30px;margin:10px;	
+	height:370px;
+	box-sizing:border-box;
+	border-left:3px solid white;
+	border-top:3px solid white;
+}
+
+
+.m2{
+	
+	border-right:3px solid white;
+		
+		border-top:3px solid white;
+	box-sizing:border-box;
+	float:right;
+	background:#000;
+	overflow:hidden;padding:30px;	margin:10px;height:370px;
+}
+.m2 form{
+	color: black;
+	text-align: center;
+
+}
+.map{
+	margin:40px auto;
+	padding:20px;
+	transition: 5s;
+}
+
