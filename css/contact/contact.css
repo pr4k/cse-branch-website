@@ -10,25 +10,29 @@ section{
 	color:white; 
 }
 .container{
-	margin: 120px;
+	margin: 100px;
 }
-
+.head{
+	text-align: center;
+	color: white;
+	font-size: 50px;
+	font-family: calibri;
+}
 .container h1{
 
     font-family:Cyberfall;
     text-align:center;
      font-size:45px;
-     
-     margin-bottom: 25px;
+      margin-bottom: 25px;
 	 padding-bottom:20px;
 	
 }
 .imgbox{
 		box-shadow: 0 10px 25px rgba(0,0,0,.8);
      position:relative;border-radius: 30% 30%;
-	margin:20px auto;
+	margin:10px auto;
 		max-width:300px;
-	width:240px;height:250px;
+	width:190px;height:170px;
 	
 
 }.imgbox img{
@@ -40,7 +44,7 @@ section{
 	font-size:22px;
 		font-weight:bold;
 	padding-top:12px;
-	padding-bottom:auto;
+	
 	padding-left:auto;padding-right:auto;
 
 
@@ -48,7 +52,7 @@ section{
 	font-size:22px;
 		
 		font-weight:bold;
-		font-family:Arial;
+		font-family:calibri;
 }
 .imgbox ul{
 	position:absolute;
@@ -90,18 +94,18 @@ section{
 	padding:0;
 	top:0;
 	margin:10px;
-	font-size:20.5px;
+	font-size:16.5px;
 	margin-left:19px;
-	width:39.5px;
+	width:30.5px;
 	margin:4px 4px;
-	height:32.5px;
+	height:29.5px;
 	justify-content:center;
 	align-items:center;
 
 }
 .imgbox ul li:hover:nth-child(1)
 {
-	background:#3b5999;color: white;
+	background:#4875B4 color: white;
 }
 
 
@@ -127,9 +131,9 @@ section{
 .m1{
 
 	float:left;
-	background:#000;
+	
 	overflow:hidden;padding:30px;margin:10px;	
-	height:370px;
+	height:380px;
 	box-sizing:border-box;
 	border-left:3px solid white;
 	border-top:3px solid white;
@@ -144,7 +148,7 @@ section{
 	box-sizing:border-box;
 	float:right;
 	background:#000;
-	overflow:hidden;padding:30px;	margin:10px;height:370px;
+	overflow:hidden;padding:30px;	margin:10px;height:400px;
 }
 .m2 form{
 	color: black;
