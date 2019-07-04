@@ -10,13 +10,13 @@ section{
 	color:white; 
 }
 .container{
-	margin: 100px;
+	margin: 80px;
 }
 .head{
 	text-align: center;
 	color: white;
 	font-size: 50px;
-	font-family: calibri;
+	font-family: Comic Sabs MS;
 }
 .container h1{
 
@@ -41,10 +41,11 @@ section{
 }
 
 .profile h2{
-	font-size:22px;
+	font-size:19px;
 		font-weight:bold;
 	padding-top:12px;
-	
+		font-family: Comic Sans MS;
+
 	padding-left:auto;padding-right:auto;
 
 
@@ -52,7 +53,7 @@ section{
 	font-size:22px;
 		
 		font-weight:bold;
-		font-family:calibri;
+	font-family: Comic Sans MS;
 }
 .imgbox ul{
 	position:absolute;
@@ -105,7 +106,7 @@ section{
 }
 .imgbox ul li:hover:nth-child(1)
 {
-	background:#4875B4 color: white;
+	background:#4875B4; color: white;
 }
 
 
@@ -133,7 +134,7 @@ section{
 	float:left;
 	
 	overflow:hidden;padding:30px;margin:10px;	
-	height:380px;
+	height:510px;
 	box-sizing:border-box;
 	border-left:3px solid white;
 	border-top:3px solid white;
@@ -148,7 +149,7 @@ section{
 	box-sizing:border-box;
 	float:right;
 	background:#000;
-	overflow:hidden;padding:30px;	margin:10px;height:400px;
+	overflow:hidden;padding:30px;	margin:10px;height:520px;
 }
 .m2 form{
 	color: black;
