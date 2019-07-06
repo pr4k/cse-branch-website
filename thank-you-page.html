@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            This is the title of the document
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Satisfy'); 
+            ul.animated-thank-you { 
+                 width:100%;
+                 max-width:320px;
+                 margin:0 auto;
+                 font-weight:500;
+                 list-style-type: none;
+                 padding-top: 40px;
+            }
+            ul.animated-thank-you li { 
+                 float:left;
+                 display:none;
+                 height:20px;
+                 font-family: 'Satisfy', cursive;
+                 color:#0ca4dc;
+                 font-size:72px;
+                 padding-top: 100px;
+            }                    
+            
+        </style>
+        <script>
+            jQuery(function(){
+                var animateThankYou = function() {
+                    $('ul.animated-thank-you').find('li').css({'display':'none'});
+                    var obj = $('ul.animated-thank-you'), 
+                    lists = obj.children();
+                    $(lists).css({ 
+                        'opacity': 0,
+                        'display':'inline-block',
+                    });
+                    $( lists ).each(function( i ) {
+                        $(this).delay( i * 500 ).animate({ 
+                            'opacity': 1
+                        });
+                    });
+                };
+            
+                animateThankYou();
+            });
+            </script>
+    </head>
+    <body>
+        <ul class="animated-thank-you">
+            <li>Congratulations!</li>
+            <li>Your Data</li>
+            <li>Has Been</li>
+            <li>Succesfully</li>
+            <li>Submitted!!!</li>
+          </ul>
+    </body>
+</html>
