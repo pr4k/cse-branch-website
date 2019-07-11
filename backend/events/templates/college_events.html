@@ -1,33 +1,28 @@
 {% extends "base.html" %}
-<!DOCTYPE html>
 
 {% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/college_events/event.css' %}">
 
+{% endblock %}
 
-<html lang="en">
-	<head>
-
-			<title>EVENTS</title>
-
-	</head>
-	<body >
 	<!-- card area -->
 	{% block image %}
-	<img src="{% static 'img/college_events/bg.png' %}" id="bg" alt="" style=" z-index: -50;">
+	<img src="{% static 'img/college_events/p8.jpg' %}" id="bg" alt="" style=" z-index: -50;">
 	{% endblock %}
 {% block body %}
 		<section>
-		
+
 			<div class=container-fluid>
 					<div class=container>
-					<h1 class="text-center">IIIT-BH EVENTS</h1>
+					<h1 class="text-center">IIIT-BH EVENTS</h1><br><hr><br>
 							<div class=row>
-							
-							
+
+
 								<div class=col-sm-3>
-												
+
 									<div class="imageBox">
-									
+
 										<img src="{% static 'img/college_events/mun.jpg' %}" class="img-responsive">
 									<h3>MODEL UN</h3>
 				 <h5>&emsp;EVENT NAME - MODEL UN&emsp;<br>
@@ -37,7 +32,7 @@
 						  &emsp;ORGANISER - IIIT-BH&emsp;<br>
 
 						  &emsp;LOCATION -  BHUBANESHWAR&emsp;<br>
-						  
+
 						  &emsp;EVENT DATES : OCTOBER&emsp;<br>
 				 </h5>
 
@@ -46,17 +41,17 @@
 											<li><a href=https://www.facebook.com/iiitbh.mun/><i class="fa fa-facebook-f"></i></a></li>
 											<li><a href=https://www.instagram.com/iiitbh_mun/><i class="fa fa-instagram"></i></a></li>
 											<li><a href=https://iiitbhmun.in/><i class="fa fa-globe"></i></a></li>
-										</ul>	
+										</ul>
 									</div>
-		
+
 								</div>
-								
-								
-								
+
+
+
 								<div class=col-sm-3>
-					
+
 									<div class="imageBox">
-									
+
 										<img src="{% static 'img/college_events/ingenium.jpg' %}" class="img-responsive">
 										<h3>INGENIUM</h3>
 					<h5>
@@ -67,24 +62,24 @@
 						  &emsp;ORGANISER - IIIT-BH&emsp;<br>
 
 						  &emsp;LOCATION -  BHUBANESHWAR&emsp;<br>
-						  
+
 						  &emsp;EVENT DATES : 19-20TH JAN&emsp;<br>
 				 </h5>
-										
+
 										<ul>
 											<li><a href=https://www.facebook.com/pg/ingenium.iiitbh/??><i class="fa fa-facebook-f"></i></a></li>
 											<li><a href=https://www.instagram.com/ingenium.iiitbh/><i class="fa fa-instagram"></i></a></li>
 											<li><a href=https://www.facebook.com/ingenium.iiitbh/videos/1936575779695301/><i class="fa fa-video-camera"></i></a></li>
-										</ul>	
+										</ul>
 									</div>
-		
-		
+
+
 								</div>
-								
+
 								<div class=col-sm-3>
-					
+
 									<div class="imageBox">
-									
+
 										<img src="{% static 'img/college_events/advaita.jpg' %}" class="img-responsive">
 										<h3>ADVAITA</h3>
 				<h5>&emsp;EVENT NAME - ADVAITA&emsp;<br>
@@ -94,25 +89,25 @@
 						  &emsp;ORGANISER - IIIT-BH&emsp;<br>
 
 						  &emsp;LOCATION -  BHUBANESHWAR&emsp;<br>
-						  
+
 						  &emsp;EVENT DATES : 7-10TH FEB&emsp;<br>
 				 </h5>
 										<ul>
 											<li><a href=https://www.facebook.com/advaita.iiit><i class="fa fa-facebook-f"></i></a></li>
 											<li><a href=https://www.instagram.com/advaita_iiitbh/?hl=en><i class="fa fa-instagram"></i></a></li>
 											<li><a href=https://www.youtube.com/channel/UCkULTsUj0_Ukm9DWOtin5yw><i class="fa fa-youtube"></i></a></li>
-										</ul>	
+										</ul>
 									</div>
-		
-		
+
+
 								</div>
-								
-								
+
+
 								<div class=col-sm-3>
-					
+
 									<div class="imageBox">
-									
-										<img src="{% static 'img/college_events/tasveer.jpg' %}" class="img-responsive">
+
+										<img src="{% static 'img/college_events/tasveer.png' %}" class="img-responsive">
 										 <h3>TASVEER</h3>
 				 <h5>
 					&emsp;EVENT NAME - TASVEER&emsp;<br>
@@ -122,27 +117,27 @@
 						  &emsp;ORGANISER - IIIT-BH&emsp;<br>
 
 						  &emsp;LOCATION -  BHUBANESHWAR&emsp;<br>
-						  
+
 						  &emsp;EVENT DATES : OCTOBER&emsp;<br>
 				 </h5>
 										<ul>
 											<li><a href=https://www.facebook.com/ThePhotoGeeks/?ref=br_rs><i class="fa fa-facebook-f"></i></a></li>
 											<li><a href=https://www.instagram.com/photogeeks.iiit/?hl=en><i class="fa fa-instagram"></i></a></li>
 											<li><a href=https://www.youtube.com/watch?v=GwZr4C2TEjk><i class="fa fa-youtube"></i></a></li>
-										</ul>	
+										</ul>
 									</div>
-		
-		
+
+
 								</div>
-								
-								
-								
-								
-								
+
+
+
+
+
 								<div class=col-sm-3>
-												
+
 									<div class="imageBox">
-									
+
 										<img src="{% static 'img/college_events/krida1.jpg' %}" class="img-responsive">
 										<h3>KRIDA</h3>
 				<h5>&emsp;EVENT NAME - KRIDA&emsp;<br>
@@ -152,23 +147,23 @@
 						  &emsp;ORGANISER - IIIT-BH&emsp;<br>
 
 						  &emsp;LOCATION -  BHUBANESHWAR&emsp;<br>
-						  
+
 						  &emsp;EVENT DATES : 24-27TH JAN&emsp;<br>
 				 </h5>
 										<ul>
 											<li><a href=https://www.facebook.com/iiitbbsrSports7/><i class="fa fa-facebook-f"></i></a></li>
 											<li><a href=https://www.instagram.com/krida_iiit/?hl=en><i class="fa fa-instagram"></i></a></li>
 											<li><a href=https://www.facebook.com/iiitbbsrSports7/videos/413286565878772/><i class="fa fa-video-camera"></i></a></li>
-										</ul>	
+										</ul>
 									</div>
-		
+
 								</div>
-								
-								
+
+
 								<div class=col-sm-3>
-												
+
 									<div class="imageBox">
-									
+
 										<img src="{% static 'img/college_events/rang.jpg' %}" class="img-responsive">
 										<h3>RANGBOOMI</h3>
 				 <h5>
@@ -179,23 +174,23 @@
 						  &emsp;ORGANISER - IIIT-BH&emsp;<br>
 
 						  &emsp;LOCATION -  BHUBANESHWAR&emsp;<br>
-						  
+
 						  &emsp;EVENT DATES : 2ND FEB&emsp;<br>
 				 </h5>
 										<ul>
 											<li><a href=https://www.facebook.com/iiit.fats/><i class="fa fa-facebook-f"></i></a></li>
 											<li><a href=https://www.instagram.com/aakanksh_iiit/?hl=en><i class="fa fa-instagram"></i></a></li>
 											<li><a href=#><i class="fa fa-video-camera"></i></a></li>
-										</ul>	
+										</ul>
 									</div>
-		
+
 								</div>
-								
-								
+
+
 									<div class=col-sm-3>
-					
+
 									<div class="imageBox">
-									
+
 										<img src="{% static 'img/college_events/dj.jpg' %}" class="img-responsive">
 										<h3>NEBULAE</h3>
 					<h5>
@@ -206,27 +201,27 @@
 						  &emsp;ORGANISER - IIIT-BH&emsp;<br>
 
 						  &emsp;LOCATION -  BHUBANESHWAR&emsp;<br>
-						  
+
 						  &emsp;EVENT DATES : 19-20 Jan&emsp;<br>
 				 </h5>
-										
+
 										<ul>
 											<li><a href=#><i class="fa fa-facebook-f"></i></a></li>
 											<li><a href=#><i class="fa fa-instagram"></i></a></li>
 											<li><a href=#><i class="fa fa-video-camera"></i></a></li>
-										</ul>	
+										</ul>
 									</div>
-		
-		
+
+
 								</div>
-								
-								
-								
-								
+
+
+
+
 								<div class=col-sm-3>
-					
+
 									<div class="imageBox">
-									
+
 										<img src="{% static 'img/college_events/diwali.jpg' %}" class="img-responsive">
 										<h3>FESTIVALS</h3>
 					<h5>
@@ -237,32 +232,32 @@
 						  &emsp;ORGANISER - IIIT-BH&emsp;<br>
 
 						  &emsp;LOCATION -  BHUBANESHWAR&emsp;<br>
-						  
+
 						  &emsp;EVENT DATES : 2019&emsp;<br>
 				 </h5>
-										
+
 										<ul>
-											
-										</ul>	
+
+										</ul>
 									</div>
-		
-		
+
+
 								</div>
-								
-								
-								
-							
-								
-								
-								
-								
-								
-								
+
+
+
+
+
+
+
+
+
+
 							</div>
-							
+
 					</div>
 			</div>
 		</section>
 	{% endblock %}
 	</body>
-</html>		
+</html>

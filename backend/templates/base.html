@@ -4,9 +4,11 @@
 <head>
 
 	
-	{% load static %}
+    {% load static %}
+    
+{% block style %}{% endblock %}
 {% block css %}
-	<title>Freshers party</title>
+	<title>{% block title %}{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
     <meta charset="utf-8">
 
@@ -34,7 +36,7 @@
 
     <!--// css -->
     <!-- font-awesome icons -->
-
+    <link rel="stylesheet" href="{% static 'css/contact/contact.css' %}">
     <!-- //font-awesome icons -->
     <!-- font -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800" rel="stylesheet">
@@ -48,61 +50,69 @@
 </head>
 
 <body>
-    {% block additional %}
-
-    {% endblock %}
-
-		{% block image %} 
-		
-		
-	{% endblock %}
-
-
-    {% block navbar %}
-    <div class="head">
         
-            <div class="container">
-                <div class="navbar-top">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <div class="navbar-brand logo ">
-                            <h1><a href="{% url 'index' %}">Party Time</a></h1>
-                        </div>
-    
-                    </div>
-    
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav link-effect-4">
-                            <li class=" first-list"><a href="{% url 'index' %}">Home</a></li>
-                            <li class=" first-list"><a href="{% url 'events' %}">events</a></li>
-                            <li class=" first-list"><a href="{% url 'studentpage' %}">student gallery</a></li>
-    
-                            <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span data-letters="Pages">Forms</span><span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li class=" first-list"><a href="{% url 'crform' %}">CR FORM</a></li>
-                                    <li class=" first-list"><a href="{% url 'cseform' %}">Mr and Miss CSE</a></li>
-    
-                                </ul>
-                            </li>
-    
-                        </ul>
-                    </div>
-                    <!-- /.navbar-collapse -->
+                {% block additional %}
             
+                {% endblock %}
+            
+                    {% block image %} 
+                    
+                    
+                {% endblock %}
+            
+            
+                {% block navbar %}
+                <div class="head">
+                    
+                        <div class="container">
+                            <div class="navbar-top">
+                                <!-- Brand and toggle get grouped for better mobile display -->
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                    <div class="navbar-brand logo ">
+                                        <h1><a href="{% url 'index' %}">Party Time</a></h1>
+                                    </div>
+                
+                                </div>
+                
+                                <!-- Collect the nav links, forms, and other content for toggling -->
+                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                    <ul class="nav navbar-nav link-effect-4">
+                                        <li class=" first-list"><a href="{% url 'index' %}">Home</a></li>
+                                        <li class=" first-list"><a href="{% url 'events' %}">events</a></li>
+                                        <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span data-letters="Pages">Student Gallery</span><span class="caret"></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li class=" first-list"><a href="{% url 'secondstudentpage' %}">Second Year</a></li>
+                                                <li class=" first-list"><a href="{% url 'thirdstudentpage' %}">Third Year</a></li>
+                
+                                            </ul>
+                                        </li>
+                
+                
+                                        <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span data-letters="Pages">Forms</span><span class="caret"></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li class=" first-list"><a href="{% url 'crform' %}">CR FORM</a></li>
+                                                <li class=" first-list"><a href="{% url 'cseform' %}">Mr and Miss CSE</a></li>
+                
+                                            </ul>
+                                        </li>
+                                        <li class=" first-list"><a href="{% url 'contact' %}">contact us</a></li>
+                                    </ul>
+                                </div>
+                                <!-- /.navbar-collapse -->
+                        
+                            </div>
+                        </div>
                 </div>
-            </div>
-    </div>
-    {% endblock %}
-
-{% block body %}
-{% endblock %}
-</body>
-
-</html>
+                {% endblock %}
+            
+            {% block body %}
+            {% endblock %}
+            </body>
+            
+            </html>

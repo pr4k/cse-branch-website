@@ -6,7 +6,7 @@ margin:0;
 padding:0;
 justify-content:center;
 align-items:center;
-background:#000;
+
 font-family: 'Poppins' , sans-serif;
 
 }
@@ -14,39 +14,38 @@ font-family: 'Poppins' , sans-serif;
 
 section{
 	justify-content: space-between;
-	margin:130px 0;
-	
-
+	margin:90px 0;
 
 }
+
 .imageBox{
 	position:relative;
 	margin:40px auto;
 	border-radius:4px;
-	box-shadow: 0 30px 30px rgba(0,0,0,.5);	
+	box-shadow: 0 30px 30px rgba(0,0,0,.5);
 	max-width:300px;
 	overflow:hidden;
 	width:260px;
 	height:295px;
 	box-sizing:border-box;
-	
-	
+
+
 }
 .imageBox img{
-	
+
 	object-fit:cover;
 	width:100%;
 	height:100%;
 	padding:0;
 	top:0;
 	left:0;
-	
+
 }
 
 .imageBox:hover img{
 	opacity:0;
 
-	
+
 }
 
 .imageBox h3{
@@ -61,6 +60,7 @@ font-weight:bold;
 color:#fff;
 text-shadow:rgba(0,0,0,0.5);
 transition:0.7s;overflow:hidden;
+overflow:hidden;
 
 }.imageBox h5{
 	margin:0;
@@ -82,12 +82,12 @@ overflow:hidden;
 {
 	top:12%;
 	transform:translateY(-50%);
-	
+
 }.imageBox:hover h5
 {
 	top:48%;
 	transform:translateY(-50%);
-	
+
 }
 .imageBox ul{
 	position:absolute;
@@ -103,9 +103,9 @@ overflow:hidden;
 
 
 .imageBox:hover ul{
-	transform:translateY(-60px);	
+	transform:translateY(-60px);
 
-	
+
 }
 
 .imageBox ul li{

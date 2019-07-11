@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block style %}
+<link href="{% static 'css/student_profile/student_profile.css' %}" rel="stylesheet" id="bootstrap-css">
+{% endblock %}
 
 <!------ Include the above in your HEAD tag ---------->
 <!DOCTYPE html>
@@ -11,9 +14,7 @@
  
     </head>
     <body>
-        	{% block image %}
-	<img src="{% static 'img/college_events/bg.png' %}" id="bg" alt="" style=" z-index: -50;">
-    {% endblock %}
+        
     
     
      {% block additional %}
@@ -25,11 +26,12 @@
     {% endblock %}
 
     {% block body %}
-    <link href="{% static 'css/student_profile/student_profile.css' %}" rel="stylesheet" id="bootstrap-css">
-
-            {% with index='a' %}
-                                            <h1>{{ index }}</h1>
-                                            {% endwith %}
+    <br><br><br><br>
+    {% block image %}
+	<img src="{% static 'img/college_events/p8.jpg' %}" id="bg" alt="" style=" z-index: -50;">
+	{% endblock %}
+            <div class='container'>
+       
             <div class="row mt-30">
             {% if set|length != 0 %}
             {% for i in set %}
@@ -37,15 +39,15 @@
             {% for j in i %}
             <div class="col-md-4 col-sm-6">
                     <div class="box16">
-                        <img src= "{% static  j.upload|get_path  %}" height="42" width="42">
+                        <img src= "{% static  j.upload|get_path  %}" height="22" width="22">
                         <div class="box-content">
                             <h3 class="title">{{ j.name }}</h3>
-                            <span class="post">{{ j.email|id_extract}}</span>
+                            <span class="post">{{ j.email|id_extract|capital}}</span>
                             <ul class="social">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="www.instagram.com/{{ j.insta_handle }}"><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="https://www.github.com/{{ j.github }}"><i class="fa fa-github"></i></a></li>
+                                <li><a href="https://www.linkedin.com/in/{{ j.linkedin }}"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="https://www.instagram.com/{{ j.insta_handle }}"><i class="fa fa-instagram"></i></a></li>
+  
                             </ul>
                         </div>
                     </div>
@@ -58,14 +60,14 @@
                     <div class="box16">
                         <img src=" {% static  i.upload|get_path  %}">
                         <div class="box-content">
-                            <h3 class="title">{{ i.name }}   </h3>
-                            <span class="post">{{i.email|id_extract}}</span>
+                            <h3 class="title">{{ i.name }} </h3>
+                            <span class="post">{{i.email|id_extract|capital}}</span>
                             <ul class="social">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="https://www.instagram.com/{{ j.insta_handle }}"><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                            </ul>
+                                    <li><a href="https://github.com/{{ i.github }}"><i class="fa fa-github"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/in/{{ i.linkedin }}"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="https://www.instagram.com/{{ i.insta_handle }}"><i class="fa fa-instagram"></i></a></li>
+      
+                                </ul>
                         </div>
                     </div>
                 </div>
@@ -73,7 +75,7 @@
         </div>
 
         </div>
-    
+    </div>
         
 {% endblock %}
     </body>

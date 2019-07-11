@@ -262,6 +262,7 @@ ul.dropdown-menu {
 }
 .head {
     padding-top: 14px;
+    z-index: 99999;
 }
 .slider-info h3{
         font-weight: 400;

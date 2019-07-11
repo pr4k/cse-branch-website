@@ -1,0 +1,16 @@
+csrfmiddlewaretoken
+firstname
+lastname
+email
+mobile_number
+gender
+nationality
+citizen
+day
+month
+year
+Why_Cse
+Why_do_you_want_title
+Why_do_you_think_you_will_win
+Special_talents
+Achievments

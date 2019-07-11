@@ -1,0 +1,15 @@
+firstname
+lastname
+email
+mobile_number
+gender
+nationality
+citizen
+day
+month
+year
+hobby
+why_cr
+strategies
+experience
+crush

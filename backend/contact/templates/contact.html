@@ -1,0 +1,127 @@
+{% extends "base.html" %} {% load static %} {% block style %}
+<style>
+    .center{
+    	text-align: center;
+    	color: white;
+    	font-size: 50px;
+    	font-family: calibri;
+    }
+</style>
+{% endblock %} {% block title %}Contact Page{% endblock %} 
+{% block image %}
+<img src="{% static 'img/college_events/p8.jpg' %}" id="bg" alt="" style=" z-index: -50; background-position : center; background-size: fill;">
+{% endblock %}
+{% block body %}
+
+<section>
+    <div class="container text">
+
+        <b><h1>DEVEL <i class="fa fa-tint" style="font-size:35px;"></i> PERS</h1></b>
+        <hr><br><br>
+        <div class="row">
+
+            <div class="col-sm-3 profile text-center">
+                <div class="imgbox">
+                    <img src="{% static 'img/college_events/prakhar1.jpg' %}" class="img-responsive">
+                    <ul>
+                        <li><a href=#><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href=#><i class="fa fa-instagram"></i></a></li>
+                        <li><a href=#><i class="fa fa-github"></i></a></li>
+                    </ul>
+
+                </div>
+                <h2>PRAKHAR KAUSHIK</h2>
+                <h3>B118038</h3>
+
+            </div>
+
+            <div class="col-sm-3 profile text-center">
+                <div class="imgbox">
+                    <img src="{% static 'img/college_events/pc2.jpg' %}" class="img-responsive">
+                    <ul>
+                        <li><a href=#><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href=#><i class="fa fa-instagram"></i></a></li>
+                        <li><a href=#><i class="fa fa-github"></i></a></li>
+                    </ul>
+
+                </div>
+                <h2>PRIYAJEET CHOUDHURY</h2>
+                <h3>B118044</h3>
+
+            </div>
+            <div class="col-sm-3 profile text-center">
+                <div class="imgbox">
+                    <img src="{% static 'img/college_events/raj.jpg' %}" class="img-responsive">
+                    <ul>
+                        <li><a href=#><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href=#><i class="fa fa-instagram"></i></a></li>
+                        <li><a href=#><i class="fa fa-github"></i></a></li>
+                    </ul>
+
+                </div>
+                <h2>RAJPRAKASH SAHOO</h2>
+                <h3>B118045</h3>
+
+            </div>
+            <div class="col-sm-3 profile text-center">
+                <div class="imgbox">
+                    <img src="{% static 'img/college_events/ajitesh2.jpg' %}" class="img-responsive">
+                    <ul>
+                        <li><a href=#><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href=#><i class="fa fa-instagram"></i></a></li>
+                        <li><a href=#><i class="fa fa-github"></i></a></li>
+                    </ul>
+
+                </div>
+                <h2>AJITESH PANDA</h2>
+                <h3>B118008</h3>
+
+            </div>
+
+        </div><br><br>
+        <hr>
+        <div class="row">
+
+            <div class="main">
+                <b><h1>Get In Touch</h1></b><br>
+                <div class="m1" style="background: url({% static 'img/college_events/brick.jpg' %});">
+                    <h2>Contact 2nd yr CSE CR's </h2><br><br>
+                    <h3>GIRL'S CR </h3><br>
+                    <h4>SANCHI MITAL <br> <br> Email : B118053@iiit-bh.ac.in <br> <br></h4><br>
+                    <h3>BOY'S CR</h3><br>
+                    <h4>PRIYAJEET CHOUDHURY <br><br> Email : B118044@iiit-bh.ac.in</h4>
+
+                </div>
+
+                <div class="m2" style="background: url({% static 'img/college_events/brick.jpg' %});">
+
+                    <h2>Contact your correspondent<br></h2>
+                    <h4>**** Open for all Branches ****</h4><br>
+                    <form method="POST">
+                        {% csrf_token %}
+                        <label><font size=+1 color=white>NAME *</label><br>
+                        <input type="text" name="name" required style="color:black"></input><br><br>
+                        <label><font size=+1 color=white>COLLEGE &nbsp;ID *</label><br></font>
+                        <input type="text" name="id" required style="color:black"></input><br><br>
+                        <label><font size=+1 color=white>POST YOUR QUERY HERE</label><br><textarea name="query" style="color:black"></textarea></font>
+                        <br><br>
+                        <button type="submit" class="btn btn-success"> FIND G-MAIL </button>
+                    </form>
+                </div>
+            </div>
+
+        </div><br><br>
+        <hr><br><br>
+        <div class="row">
+
+            <b><h1>COLLEGE MAP</h1></b>
+            <div class=map>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.1337466661103!2d85.74122071500095!3d20.29473038640057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1907923fc9c557%3A0xd3b0b05336a9dfaa!2sIIIT%2CBBSR!5e0!3m2!1sen!2sin!4v1561913741263!5m2!1sen!2sin" width="100%" height="500" frameborder="0" style="border:6px solid white" allowfullscreen></iframe>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

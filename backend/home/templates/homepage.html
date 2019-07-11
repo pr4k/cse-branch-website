@@ -4,100 +4,24 @@
 
 <head>
 
-	
+
 	{% load static %}
-{% block css %}
-	<title>Freshers party</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
-    <meta charset="utf-8">
-
-		<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-		 
-
-		 <link rel="stylesheet" href="{% static 'css/cr-form/pro-cr-form.css' %}" type="text/css" media="all">
-		 <style>
-				.btn{
-					vertical-align: 0%;
-				}
-			</style>
-
-    <!-- bootstrap-css -->
-
-    <!--// bootstrap-css -->
-    <!-- css -->
+    {% block style %}
     <link rel="stylesheet" href="{% static 'css/homepage3/style.css' %}" type="text/css" media="all" />
 
     <link rel="stylesheet" href="{% static 'css/homepage3/flexslider.css' %}" type="text/css" media="screen" property="" />
+    {% endblock %}
 
-    <!--// css -->
-    <!-- font-awesome icons -->
+	{% block title %}Freshers party{% endblock %}
 
-    <!-- //font-awesome icons -->
-    <!-- font -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600,700" rel="stylesheet">
-    <!-- //font -->
-    <script src="{% static 'js/jshome/jquery-2.2.3.min.js' %}"></script>
-	<script src="{% static 'js/jshome/bootstrap.js' %}"></script>
-	<link rel="stylesheet" href="{% static 'css/college_events/event.css' %}">
-{% endblock %}
 </head>
 
 <body>
 
-		{% block image %} 
-		<img src="{%static 'img/homepage/banner.jpg' %}" id="bg" alt="" style=" z-index: -50;">
-		
+		{% block image %}
+		<img src="{%static 'img/college_events/p8.jpg' %}" id="bg" alt="" style=" z-index: -50;">
+
 	{% endblock %}
-
-		{% block navbar %}
-		<div class="head">
-			
-				<div class="the-box">
-					<div class="navbar-top">
-						<!-- Brand and toggle get grouped for better mobile display -->
-						<div class="navbar-header">
-							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-								<span class="sr-only">Toggle navigation</span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
-							<div class="navbar-brand logo ">
-								<h1><a href="{% url 'index' %}">Party Time</a></h1>
-							</div>
-		
-						</div>
-		
-						<!-- Collect the nav links, forms, and other content for toggling -->
-						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-							<ul class="nav navbar-nav link-effect-4">
-								<li class=" first-list"><a href="{% url 'index' %}">Home</a></li>
-								<li class=" first-list"><a href="{% url 'events' %}">events</a></li>
-								<li class=" first-list"><a href="{% url 'studentpage' %}">student gallery</a></li>
-		
-								<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span data-letters="Pages">Forms</span><span class="caret"></span></a>
-									<ul class="dropdown-menu">
-										<li class=" first-list"><a href="{% url 'crform' %}">CR FORM</a></li>
-										<li class=" first-list"><a href="{% url 'cseform' %}">Mr and Miss CSE</a></li>
-		
-									</ul>
-								</li>
-		
-							</ul>
-						</div>
-						<!-- /.navbar-collapse -->
-				
-					</div>
-				</div>
-		</div>
-		{% endblock %}
-
 		<!-- banner -->
 		{% block body %}
 
@@ -133,8 +57,9 @@
                         <ul class="rslides" id="slider3">
                             <li>
                                 <div class="slider-info" data-aos="fade-left">
-                                    <h6>IT'S FRESHERS' TIME!!</h6>
-                                    <h3>WELCOME FRESHERS 2019</h3>
+                                    <h6>IT'S FRESHERS' TIME!!</h6><br>
+                                    <h3>WELCOME FRESHERS 2019</h3><br>
+                                    <h6> CSE FAMILY WELCOMES YOU !!</h6>
 
                                     <div class="more-button">
                                         <a href="#" data-toggle="modal" data-target="#myModal">More Info</a>
@@ -143,8 +68,9 @@
                             </li>
                             <li>
                                 <div class="slider-info" data-aos="fade-left">
-                                    <h6>IT'S FRESHERS' TIME!!</h6>
-                                    <h3>ARE YOU ALL EXCITED?</h3>
+                                    <h6>IT'S FRESHERS' TIME!!</h6><br>
+                                    <h3>ARE YOU ALL EXCITED?</h3><br>
+                                     <h6> CSE FAMILY WELCOMES YOU !!</h6>
 
                                     <div class="more-button">
                                         <a href="#" data-toggle="modal" data-target="#myModal">More Info</a>
@@ -153,8 +79,9 @@
                             </li>
                             <li>
                                 <div class="slider-info" data-aos="fade-left">
-                                    <h6>IT'S FRESHERS' TIME!!</h6>
-                                    <h3> ENJOY THIS DAY LIKE HELL!</h3>
+                                    <h6>IT'S FRESHERS' TIME!!</h6><br>
+                                    <h3> ENJOY THIS DAY LIKE HELL!</h3><br>
+                                     <h6> CSE FAMILY WELCOMES YOU !!</h6>
 
                                     <div class="more-button">
                                         <a href="#" data-toggle="modal" data-target="#myModal">More Info</a>

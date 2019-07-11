@@ -3,5 +3,6 @@ from application import views
 
 urlpatterns=[
     path('cr_elections',views.crElections.as_view(),name="crform"),
-    path('mr_and_miss_cse',views.mrAndMissCse.as_view(),name="cseform")
+    path('mr_and_miss_cse',views.mrAndMissCse.as_view(),name="cseform"),
+    path('verify/<code>/<email>',views.verified.as_view(),name="upform_verify")
 ]

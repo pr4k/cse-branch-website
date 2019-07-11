@@ -1,41 +1,32 @@
 {% extends "base.html" %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
+
+
+
     {% load static %}
 	<!-- Meta tags -->
-	<titl>CR-Application-form</title>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<!-- stylesheets -->
+	{% block style %}
 	<link rel="stylesheet" href="{% static 'css/cr-form/pro-cr-form.css' %}" type="text/css" media="all">
-	
-	<!-- google fonts  -->
-	<link href="//fonts.googleapis.com/css?family=Alegreya+Sans:100,100i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
-
-</head>
-<body>
-
-	{% block image %} 
-	<img src="{% static 'img/application/pro-cr-form-bg.jpg' %}" id="bg" alt=""style=" z-index: -50;">
-	
 {% endblock %}
+	{% block image %}
+	<img src="{% static 'img/application/pro-cr-form-bg.jpg' %}" id="bg" alt=""style=" z-index: -50;">
 
+{% endblock %}
+{% block title %}C R FORM {% endblock %}
 {% block body %}
 
-	<div class="w3ls-banner">
+	<div class="w3ls-banner" style="z-index: 50;">
 	<div class="heading">
+
 		<h1>FORM FOR CLASS REPRESENTATIVE</h1>
 	</div>
 		<div class="the-box container">
-			<div class="heading">
-				<h2>Please Enter Your Details</h2>
-				<p>Fill the application form below and submit.</p>
+			<div class="heading" >
+				<h2>Please Enter Your Details</h2><br>
+				<p style="color:white;">Fill the application form below and submit.</p>
 			</div>
 			<div class="agile-form">
 				<form action="#" method="post">
+						{% csrf_token %}
 					<ul class="field-list">
 						<li class="name">
 							<label class="form-label"> Name <span class="form-required"> * </span></label>
@@ -48,14 +39,14 @@
 								</span>
 							</div>
 						</li>
-						<li> 
+						<li>
 							<label class="form-label"> E-Mail Address <span class="form-required"> * </span></label>
 							<div class="form-input">
 								<input type="email" name="email" placeholder="Mail@example.com" required>
-							
+
 							</div>
 						</li>
-						<li> 
+						<li>
 							<label class="form-label"> Phone Number <span class="form-required"> * </span></label>
 							<div class="form-input">
 								<input type="text" name="mobile_number" placeholder="Phone Number" required >
@@ -72,63 +63,63 @@
 								</select>
 							</div>
                         </li>
-                        <li> 
-                            <label class="form-label"> I am from <span class="form-required"> * </span></label>
-                            <div class="form-input">
-                                <span class="form-sub-label">
-                                    <input type="radio" name="nationality" value="Indian" required >India
-                                </span>
-                                <span>
-                                    <input type="radio" name="nationality" value="Non-Indian" required>Abroad
-                                </span>
-                            </div>
-                        </li>
-						<li>
-							<label class="form-label"> If Indian <span class="form-required">*</span></label>
-							<div class="form-input">
-								<select class="form-dropdown" name="citizen" required>
-									<option value="">Select State</option>
-                                    <option value=""> Andaman & Nicobar </option>
-                                    <option value="Andhra Pradesh"> Andhra Pradesh </option>
-									<option value="Arunachal Pradesh"> Arunachal Pradesh</option>
-									<option value="Assam"> Assam </option>
-                                    <option value="Bihar"> Bihar </option>
-                                    <option value="Chandigarh"> Chandigarh </option>
-                                    <option value="Chhattisgarh"> Chhattisgarh </option>
-                                    <option value="Dadra & Nagar Haveli"> Dadra & Nagar Haveli </option>
-                                    <option value="Daman & Diu"> Daman & Diu </option>
-                                    <option value="Goa"> Goa </option>
-                                    <option value="Gujarat"> Gujarat </option>
-                                    <option value="Haryana"> Haryana </option>
-                                    <option value="Himachal Pradesh"> Himachal Pradesh </option>
-                                    <option value="Jammu & Kashmir"> Jammu & Kashmir </option>
-                                    <option value="Jharkhand"> Jharkhand </option>
-                                    <option value="Karnataka"> Karnataka </option>
-                                    <option value="Kerala"> Kerala </option>
-                                    <option value="Lakshadweep"> Lakshadweep </option>
-                                    <option value="Madhya Pradesh"> Madhya Pradesh </option>
-                                    <option value="Maharashtra"> Maharashtra </option>
-                                    <option value="Manipur"> Manipur </option>
-                                    <option value="Meghalaya"> Meghalaya </option>
-                                    <option value="Mizoram"> Mizoram </option>
-                                    <option value="Nagaland"> Nagaland </option>
-                                    <option value="New Delhi"> New Delhi </option>
-                                    <option value="Odisha"> Odisha </option>
-                                    <option value="Puducherry"> Puducherry </option>
-                                    <option value="Punjab"> Punjab </option>
-                                    <option value="Rajasthan"> Rajasthan </option>
-                                    <option value="Sikkim"> Sikkim </option>
-                                    <option value="Tamil Nadu"> Tamil Nadu </option>
-                                    <option value="Telangana"> Telangana </option>
-                                    <option value="Tripura"> Tripura </option>
-                                    <option value="Uttarakhand"> Uttarakhand </option>
-                                    <option value="Uttar Pradesh"> Uttar Pradesh </option>
-                                    <option value="West Bengal"> West Bengal </option>
-								</select>
-							</div>
-						</li>
-						<li>
-							<label class="form-label"> Date of Birth <span class="form-required"> * </span></label>
+                        <li>
+								<label class="form-label"> I am from <span class="form-required"> * </span></label>
+								<div class="form-input">
+									<span class="form-sub-label">
+										<input type="radio" id="tou" name="nationality" value="Indian" required >India
+									</span>
+									<span>
+										<input type="radio" id="touc"  name="nationality" value="Non-Indian" required>Abroad
+							
+									</span>
+								</div>
+							</li>
+							<li id="tyu">
+								<label class="form-label"> If Indian <span class="form-required">*</span></label>
+								<div class="form-input">
+									<select class="form-dropdown" name="citizen" required>
+										<option value="">Select State</option>
+										<option value=""> Andaman & Nicobar </option>
+										<option value="Andhra Pradesh"> Andhra Pradesh </option>
+										<option value="Arunachal Pradesh"> Arunachal Pradesh</option>
+										<option value="Assam"> Assam </option>
+										<option value="Bihar"> Bihar </option>
+										<option value="Chandigarh"> Chandigarh </option>
+										<option value="Chhattisgarh"> Chhattisgarh </option>
+										<option value="Dadra & Nagar Haveli"> Dadra & Nagar Haveli </option>
+										<option value="Daman & Diu"> Daman & Diu </option>
+										<option value="Goa"> Goa </option>
+										<option value="Gujarat"> Gujarat </option>
+										<option value="Haryana"> Haryana </option>
+										<option value="Himachal Pradesh"> Himachal Pradesh </option>
+										<option value="Jammu & Kashmir"> Jammu & Kashmir </option>
+										<option value="Jharkhand"> Jharkhand </option>
+										<option value="Karnataka"> Karnataka </option>
+										<option value="Kerala"> Kerala </option>
+										<option value="Lakshadweep"> Lakshadweep </option>
+										<option value="Madhya Pradesh"> Madhya Pradesh </option>
+										<option value="Maharashtra"> Maharashtra </option>
+										<option value="Manipur"> Manipur </option>
+										<option value="Meghalaya"> Meghalaya </option>
+										<option value="Mizoram"> Mizoram </option>
+										<option value="Nagaland"> Nagaland </option>
+										<option value="New Delhi"> New Delhi </option>
+										<option value="Odisha"> Odisha </option>
+										<option value="Puducherry"> Puducherry </option>
+										<option value="Punjab"> Punjab </option>
+										<option value="Rajasthan"> Rajasthan </option>
+										<option value="Sikkim"> Sikkim </option>
+										<option value="Tamil Nadu"> Tamil Nadu </option>
+										<option value="Telangana"> Telangana </option>
+										<option value="Tripura"> Tripura </option>
+										<option value="Uttarakhand"> Uttarakhand </option>
+										<option value="Uttar Pradesh"> Uttar Pradesh </option>
+										<option value="West Bengal"> West Bengal </option>
+									</select>
+								</div>
+							</li>
+							<li>							<label class="form-label"> Date of Birth <span class="form-required"> * </span></label>
 							<div class="form-input dob">
 								<span class="form-sub-label">
 									<select name="day" class="day" required>
@@ -232,58 +223,58 @@
                             <br>
                             </div>
                         </li>
-                        <li> 
+                        <li>
 							<label class="form-label">
 							   What is your Hobby?
 							   <span class="form-required"> * </span>
 							</label>
 							<div class="form-input add">
 								<span class="form-sub-label">
-                                    <textarea  row="50" cols="60" name="street_address" placeholder="Whatever you enjoy doing the most!" required></textarea>
+                                    <textarea  row="50" cols="60" name="hobby" placeholder="Whatever you enjoy doing the most!" required></textarea>
                                 </span>
 							</div>
                         </li>
-                        <li> 
+                        <li>
                             <label class="form-label">
                                 Why do you want to be the CR?
                             <span class="form-required"> * </span>
                             </label>
                             <div class="form-input add">
                                 <span class="form-sub-label">
-                                    <textarea  row="50" cols="60" name="street_address" placeholder="Give a descriptive answer!" required></textarea>
+                                    <textarea  row="50" cols="60" name="why_cr" placeholder="Give a descriptive answer!" required></textarea>
                                 </span>
                             </div>
                         </li>
-                        <li> 
+                        <li>
                             <label class="form-label">
                                 What are your strategies to win the election?
                             <span class="form-required"> * </span>
                             </label>
                             <div class="form-input add">
                                 <span class="form-sub-label">
-                                    <textarea  row="50" cols="60" name="street_address" placeholder="We will keep it secret!" required></textarea>
+                                    <textarea  row="50" cols="60" name="strategies" placeholder="We will keep it secret!" required></textarea>
                                 </span>
                             </div>
                         </li>
-                        <li> 
+                        <li>
                             <label class="form-label">
                                 Any previous experience of leadership? And how did it went?
                             <span class="form-required"> * </span>
                             </label>
                             <div class="form-input add">
                                 <span class="form-sub-label">
-                                    <textarea  row="50" cols="60" name="street_address" placeholder="No Lies!!" required></textarea>
+                                    <textarea  row="50" cols="60" name="experience" placeholder="No Lies!!" required></textarea>
                                 </span>
                             </div>
                         </li>
-                        <li> 
+                        <li>
                             <label class="form-label">
                                 Tell us about your college crush!!
                             <span class="form-required"> * </span>
                             </label>
                             <div class="form-input add">
                                 <span class="form-sub-label">
-                                    <textarea  row="50" cols="60" name="street_address" placeholder="Mandatory to answer!" required></textarea>
+                                    <textarea  row="50" cols="60" name="crush" placeholder="Mandatory to answer!" required></textarea>
                                 </span>
                             </div>
                         </li>
@@ -291,10 +282,22 @@
 					<div class="submit_btn">
 						<input type="submit" value="Submit">
 					</div>
-				</form>	
+				</form>
 			</div>
 		</div>
 	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                <script>
+ 						$(document).ready(function(){
+					  $("#touc").click(function(){
+ 					   $("#tyu").hide();
+										  });
+ 					 $("#tou").click(function(){
+  					  $("#tyu").show();
+  					});
+				});
+                            
+							 </script>
 	{% endblock %}
 </body>
 </html>
