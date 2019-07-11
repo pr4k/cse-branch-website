@@ -12,6 +12,18 @@
 	
 	<!-- google fonts  -->
 	<link href="//fonts.googleapis.com/css?family=Alegreya+Sans:100,100i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                <script>
+ 						$(document).ready(function(){
+					  $("#touc").click(function(){
+ 					   $("#tyu").hide();
+										  });
+ 					 $("#tou").click(function(){
+  					  $("#tyu").show();
+  					});
+				});
+                            
+							 </script>
 
 </head>
 <body background="img/form-background/pro-cr-form-bg.jpg">
@@ -66,14 +78,15 @@
                             <label class="form-label"> I am from <span class="form-required"> * </span></label>
                             <div class="form-input">
                                 <span class="form-sub-label">
-                                    <input type="radio" name="nationality" value="Indian" required >India
+                                    <input type="radio" id="tou" name="nationality" value="Indian" required >India
                                 </span>
                                 <span>
-                                    <input type="radio" name="nationality" value="Non-Indian" required>Abroad
+                                    <input type="radio" id="touc"  name="nationality" value="Non-Indian" required>Abroad
+                        
                                 </span>
                             </div>
                         </li>
-						<li>
+						<li id="tyu">
 							<label class="form-label"> If Indian <span class="form-required">*</span></label>
 							<div class="form-input">
 								<select class="form-dropdown" name="citizen" required>
