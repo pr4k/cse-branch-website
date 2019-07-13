@@ -1,6 +1,6 @@
 var basic = $('#main-cropper').croppie({
-    viewport: { width: 250, height: 250 },
-    boundary: { width: 300, height: 300 },
+    viewport: { width: 340, height: 340 },
+    boundary: { width: 360, height: 380 },
     showZoomer: false,
     url: 'http://lorempixel.com/500/400/'
 });
