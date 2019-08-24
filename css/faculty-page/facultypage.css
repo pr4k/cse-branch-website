@@ -39,6 +39,8 @@
     font-family: "Comic Sans MS", cursive, sans-serif;
     color: white;
 }
+.col-lg-3{
+   margin-top:10px;}
 .grid-container:hover{
     border-top:2.5px solid white;
     border-bottom: 2.5px solid white;
