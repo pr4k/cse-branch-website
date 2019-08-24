@@ -29,12 +29,12 @@
 
 }
 .grid-container{
-    background-color: #000;
+    background-color: ;
     padding:40px;
     /*margin-bottom: 40px;*/
     margin-left:10px;
     margin-right:10px;
-    
+    border: solid;
     /* background-color: blueviolet; */
     font-family: "Comic Sans MS", cursive, sans-serif;
     color: white;
@@ -45,12 +45,9 @@
     border-top:2.5px solid white;
     border-bottom: 2.5px solid white;
     padding:55px;
-    background: #181818;
+    background: #080808;
     opacity: .9;
-    transition: 500ms;
-
-
-     
+    transition: 500ms;  
 }
 p{
     font-size: 18px;
