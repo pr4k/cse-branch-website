@@ -4,8 +4,14 @@
 }
 .faculty-pic img{
     box-shadow: 0 30px 30px rgba(0,0,0,.9); 
-     width: 260px;height: 300px;
-    transition: 500ms;
+     width: 260px;height:280px;
+    opacity: 1;
+    border-radius: 20px;
+
+}
+.faculty-pic img:hover{
+     width: 280px;height: 300px;
+    transition: 1s;
     opacity: 1;
     border-radius: 50%;
 
@@ -29,12 +35,10 @@
 
 }
 .grid-container{
-    background-color: ;
+    background:#000 ;
     padding:40px;
-    /*margin-bottom: 40px;*/
-    margin-left:10px;
-    margin-right:10px;
-    border: solid;
+    margin-bottom: 40px;
+    
     /* background-color: blueviolet; */
     font-family: "Comic Sans MS", cursive, sans-serif;
     color: white;
@@ -42,12 +46,13 @@
 .col-lg-3{
    margin-top:10px;}
 .grid-container:hover{
-    border-top:2.5px solid white;
-    border-bottom: 2.5px solid white;
+    border: 2.5px solid white;
     padding:55px;
-    background: #080808;
-    opacity: .9;
-    transition: 500ms;  
+    background: #181818;
+    
+    transition: .6s; 
+    margin-left: 8px;
+    margin-right: 8px; 
 }
 p{
     font-size: 18px;
@@ -65,6 +70,7 @@ p{
     color: white;
     font-weight: 500;
     line-height: 1.5;
+    margin-top: 50px;
 }
 
 hr{
@@ -74,4 +80,5 @@ hr{
 {
  .faculty-pic{
         float:center;}
+
 }
