@@ -1,6 +1,19 @@
 .faculty-pic{
     float: left;
-    width: 10%
+    width: 30%
+}
+.faculty-pic img{
+    width: 230px;height: 260px;
+    margin-bottom: 18px;
+    box-shadow: 0 30px 30px rgba(0,0,0,.9); 
+    border-radius:4px;
+    opacity: 1;
+
+}.faculty-pic img:hover{
+    width: 260px;height: 300px;
+    transition: 1.3s;
+    opacity: 1;
+    border-radius: 40%;
 }
 .faculty-properties{
     padding-left: 100px;
@@ -20,23 +33,28 @@
     float: right;
 
 }
-.container{
-    padding-top: 20px;
+.grid-container{
+    padding:40px;
+    margin-bottom: 40px;
     /* background-color: blueviolet; */
-    border: solid #00ace6;
     font-family: "Comic Sans MS", cursive, sans-serif;
     color: white;
 }
-.container:hover{
-    background-color: black;
-    border: solid blueviolet;
+.grid-container:hover{
+    background-color: #000;
+    border-top:2.5px solid white;
+    border-bottom: 2.5px solid white;
+    padding:55px;
+    opacity: .9;
+    transition: 1s;
+
+
      
 }
-
-body{
-    background-image: url("p8.jpg");
-    background-repeat: repeat;
+p{
+    font-size: 18px;
 }
+
 /* .faculty-name{
     color: blueviolet !important;
 } */
@@ -44,21 +62,13 @@ body{
 .text-center {
     font-family: Cyberfall;
     text-align: center;
-    font-size: 40px;
+    font-size: 45px;
     text-shadow: 0 0 4px grey;
     color: white;
     font-weight: 500;
-    line-height: 1.1;
+    line-height: 1.5;
 }
 
-/* hr {
-    display: block;
-    unicode-bidi: isolate;
-    margin-block-start: 0.5em;
-    margin-block-end: 0.5em;
-    margin-inline-start: auto;
-    margin-inline-end: auto;
-    overflow: hidden;
-    border-style: inset;
-    border-width: 1px;
-} */
+hr{
+    color: white;
+}
