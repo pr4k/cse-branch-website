@@ -1,0 +1,64 @@
+.faculty-pic{
+    float: left;
+    width: 10%
+}
+.faculty-properties{
+    padding-left: 100px;
+    margin-left: 150px;
+}
+.big-block{
+    padding-left: 30px;
+}
+.faculty-property-list{
+    list-style-type: none;
+}
+.faculty-property-inner-list{
+    list-style-type: square;
+}
+.faculty-description{
+    swidth: 100%
+    float: right;
+
+}
+.container{
+    padding-top: 20px;
+    /* background-color: blueviolet; */
+    border: solid #00ace6;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: white;
+}
+.container:hover{
+    background-color: black;
+    border: solid blueviolet;
+     
+}
+
+body{
+    background-image: url("p8.jpg");
+    background-repeat: repeat;
+}
+/* .faculty-name{
+    color: blueviolet !important;
+} */
+
+.text-center {
+    font-family: Cyberfall;
+    text-align: center;
+    font-size: 40px;
+    text-shadow: 0 0 4px grey;
+    color: white;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+/* hr {
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+} */
