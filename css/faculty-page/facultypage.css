@@ -4,7 +4,7 @@
 }
 .faculty-pic img{
     box-shadow: 0 30px 30px rgba(0,0,0,.9); 
-     width: 260px;height:280px;
+     width: 270px;height:290px;
     opacity: 1;
     border-radius: 20px;
 
@@ -38,7 +38,9 @@
     background:#000 ;
     padding:40px;
     margin-bottom: 40px;
-    
+     border-top:2.5px solid white;
+     border-bottom:2.5px solid white; 
+     margin-right: 4px;margin-left: 4px;
     /* background-color: blueviolet; */
     font-family: "Comic Sans MS", cursive, sans-serif;
     color: white;
@@ -46,13 +48,16 @@
 .col-lg-3{
    margin-top:10px;}
 .grid-container:hover{
-    border: 2.5px solid white;
+    opacity: .8;
     padding:55px;
-    background: #181818;
-    
-    transition: .6s; 
     margin-left: 8px;
     margin-right: 8px; 
+    border: 1.5px solid white;
+    
+    /*background: #181818;*/
+    opacity:.8;
+    transition: .6s; 
+  
 }
 p{
     font-size: 18px;
